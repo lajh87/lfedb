@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Creating LFE Database from Unstructured DAta - 3&nbsp; Using Chat GPT to Extract Data</title>
+<title>Creating LFE Database from Unstructured Data - 3&nbsp; Using Chat GPT to Extract Data</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -64,7 +64,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./references.html" rel="next">
+<link href="./exploratory-data-analysis.html" rel="next">
 <link href="./using-chat-gpt-with-r.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -123,7 +123,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Creating LFE Database from Unstructured DAta</a> 
+      <a href="./">Creating LFE Database from Unstructured Data</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -153,8 +153,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./exploratory-data-analysis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Exploratory Data Analysis</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">References</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">References</span></span></a>
   </div>
 </li>
     </ul>
@@ -233,7 +239,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="view-file" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="view-file"><span class="header-section-number">3.1</span> View File</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>txt_in <span class="ot">&lt;-</span> <span class="fu">readLines</span>(<span class="st">"data-raw/naompss/naomprss_2006_105_110.md"</span>) <span class="sc">|&gt;</span></span>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>txt_in <span class="ot">&lt;-</span> <span class="fu">readLines</span>(<span class="st">"data-raw/naomprss/naomprss_2006_105_110.md"</span>) <span class="sc">|&gt;</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">paste</span>(<span class="at">collapse =</span><span class="st">"</span><span class="sc">\n</span><span class="st">"</span>) </span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>yaml_loc <span class="ot">&lt;-</span> stringr<span class="sc">::</span><span class="fu">str_locate_all</span>(txt_in, <span class="st">"---"</span>)[[<span class="dv">1</span>]][<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>,]</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>meta <span class="ot">&lt;-</span> <span class="fu">substr</span>(txt_in, yaml_loc[<span class="dv">1</span>, <span class="st">"start"</span>], yaml_loc[<span class="dv">2</span>, <span class="st">"end"</span>]) <span class="sc">|&gt;</span></span>
@@ -1430,13 +1436,13 @@ December 2007
 <span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a><span class="fu">content</span>(resp)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$id
-[1] "chatcmpl-8sVDXGGBByt0Gz7hPgDX1Ve4flSND"
+[1] "chatcmpl-8sarphS7EaQ6RCOIOg8KKTPjzA6QX"
 
 $object
 [1] "chat.completion"
 
 $created
-[1] 1708000403
+[1] 1708022121
 
 $model
 [1] "gpt-3.5-turbo-0613"
@@ -1451,7 +1457,7 @@ $choices[[1]]$message$role
 [1] "assistant"
 
 $choices[[1]]$message$content
-[1] "1. Departmental funding constraints delaying contract let and limiting it to certain contracts\n2. Uncertainty regarding the integration of the weapon onto Tornado and Typhoon aircraft\n3. Delay in the Main Gate In Service Date estimates\n4. The need for further enhancement of the weapon through the addition of LASER capability\n5. The need for recovery work to meet the desired timeline for the project"
+[1] "1. Delay in contract let and limited funding\n2. Uncertainty regarding Tornado and Typhoon integration\n3. Addition of LASER capability and its impact on the project\n4. Efforts to recover the pro-rata slip to the Main Gate In Service Date estimates\n5. Need for progress in the qualification phase of the project."
 
 
 $choices[[1]]$logprobs
@@ -1467,10 +1473,10 @@ $usage$prompt_tokens
 [1] 360
 
 $usage$completion_tokens
-[1] 79
+[1] 69
 
 $usage$total_tokens
-[1] 439
+[1] 429
 
 
 $system_fingerprint
@@ -1723,8 +1729,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./references.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">References</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./exploratory-data-analysis.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Exploratory Data Analysis</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

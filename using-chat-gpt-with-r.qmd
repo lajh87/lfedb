@@ -7,7 +7,7 @@ file.edit("~/.Renviron")
 OPEN_API_KEY = <INSERT OPEN AI KEY>
 ```
 
-The restart R. 
+Save then restart R. 
 
 You can access the key as follows.
 

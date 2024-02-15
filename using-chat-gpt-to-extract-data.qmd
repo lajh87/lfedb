@@ -4,7 +4,7 @@
 ## View File
 
 ```{r}
-txt_in <- readLines("data-raw/naompss/naomprss_2006_105_110.md") |>
+txt_in <- readLines("data-raw/naomprss/naomprss_2006_105_110.md") |>
   paste(collapse ="\n") 
 yaml_loc <- stringr::str_locate_all(txt_in, "---")[[1]][1:2,]
 meta <- substr(txt_in, yaml_loc[1, "start"], yaml_loc[2, "end"]) |>

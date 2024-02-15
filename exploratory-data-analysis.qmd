@@ -1,0 +1,59 @@
+# Exploratory Data Analysis
+
+```{r}
+d <- "data-raw/naomprss"
+f <- list.files(d, pattern = "md")
+sections <- purrr::map_df(file.path(d, f), ~{
+  
+  text_in <- readLines(.x) 
+  heading_i <- text_in |>
+    stringr::str_detect("^#") |>
+    which()
+  
+  file <- unlist(stringr::str_split(.x, "/"))
+  file <- tools::file_path_sans_ext(file[length(file)])
+  
+  file_split <- unlist(stringr::str_split(file, "_"))
+  year <- file_split[2]
+  page_from = file_split[3]
+  page_to = file_split[4]
+  
+  df <- dplyr::tibble(
+    heading = text_in[heading_i],
+    from = heading_i
+  ) |>
+    dplyr::mutate(
+      to = dplyr::lead(from)-1
+    ) |>
+    tidyr::replace_na(list(to = length(heading_i))) |>
+    dplyr::mutate(year = as.numeric(year),
+                  page_from = as.numeric(page_from),
+                  page_to = as.numeric(page_to)) 
+  
+  chars <- df |> purrr::pmap_dbl(function(from, to, ...){
+    nchar(paste(text_in[from:to], collapse = "\n"))
+  })
+  
+  df$nchar <- chars
+  return(df)
+})
+
+project_section <- sections |>
+  dplyr::left_join(
+    readr::read_csv("data-raw/naomprss/page_splits_manual_labels.csv", 
+                    show_col_types = FALSE),
+    by = c("year", "page_from", "page_to")
+  )
+
+unique(project_section$project_type_label)
+
+project_section |>
+  dplyr::filter(project_type_label == "D&M Phase" ) |>
+  dplyr::mutate(id = paste(year, page_from, page_to, sep = "_")) |>
+  dplyr::select(id, nchar, heading) |>
+  tidyr::pivot_wider(names_from = heading, values_from = nchar) |>
+  tidyr::unnest() |>
+  rhandsontable::rhandsontable()
+
+
+```

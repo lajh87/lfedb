@@ -3,13 +3,14 @@ project:
   output-dir: docs
 
 book:
-  title: "Creating LFE Database from Unstructured DAta"
+  title: "Creating LFE Database from Unstructured Data"
   author: ""
   date: "15/02/2024"
   chapters:
     - index.qmd
     - using-chat-gpt-with-r.qmd
     - using-chat-gpt-to-extract-data.qmd
+    - exploratory-data-analysis.qmd
     - references.qmd
 
 bibliography: references.bib

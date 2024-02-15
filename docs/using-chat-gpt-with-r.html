@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Creating LFE Database from Unstructured DAta - 2&nbsp; Using Chat GPT with R</title>
+<title>Creating LFE Database from Unstructured Data - 2&nbsp; Using Chat GPT with R</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -123,7 +123,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Creating LFE Database from Unstructured DAta</a> 
+      <a href="./">Creating LFE Database from Unstructured Data</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -153,8 +153,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./exploratory-data-analysis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Exploratory Data Analysis</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">References</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">References</span></span></a>
   </div>
 </li>
     </ul>
@@ -188,7 +194,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>You will need to load your open ai key as an environment variable. The simplest way to do this is</p>
 <pre><code>file.edit("~/.Renviron")
 OPEN_API_KEY = &lt;INSERT OPEN AI KEY&gt;</code></pre>
-<p>The restart R.</p>
+<p>Save then restart R.</p>
 <p>You can access the key as follows.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>key <span class="ot">&lt;-</span> <span class="fu">Sys.getenv</span>(<span class="st">"OPENAI_API_KEY"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -220,7 +226,7 @@ OPEN_API_KEY = &lt;INSERT OPEN AI KEY&gt;</code></pre>
 <span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>out<span class="sc">$</span>choices<span class="sc">$</span>message.content</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "The 2020 World Series was played at Globe Life Field in Arlington, Texas."</code></pre>
+<pre><code>[1] "The World Series in 2020 was played at the Globe Life Field in Arlington, Texas."</code></pre>
 </div>
 </div>
 <p>It may well be safer to run a <code>httr::POST</code> request instead using the following function.</p>
@@ -247,13 +253,13 @@ Attaching package: 'httr'</code></pre>
 <span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="fu">content</span>(resp)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$id
-[1] "chatcmpl-8sVDTRyZcmw0h4IMZLqT8GoBisG83"
+[1] "chatcmpl-8sarkbPPynZhYBB9JsGV1TqvRMJQA"
 
 $object
 [1] "chat.completion"
 
 $created
-[1] 1708000399
+[1] 1708022116
 
 $model
 [1] "gpt-3.5-turbo-0613"
