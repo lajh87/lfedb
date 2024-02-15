@@ -49,6 +49,7 @@ unique(project_section$project_type_label)
 
 project_section |>
   dplyr::filter(project_type_label == "D&M Phase" ) |>
+  dplyr::filter(year < 2009) |>
   dplyr::mutate(id = paste(year, page_from, page_to, sep = "_")) |>
   dplyr::select(id, nchar, heading) |>
   tidyr::pivot_wider(names_from = heading, values_from = nchar) |>
