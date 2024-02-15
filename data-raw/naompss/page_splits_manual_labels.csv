@@ -1,0 +1,282 @@
+year,project_type,project,page_from,page_to,project_label,project_type_label
+2005,post-main gate,A400M,6,11,A400M,D&M Phase
+2006,post-main gate,A400M,7,14,A400M,D&M Phase
+2007,post-main gate,A400M,7,16,A400M,D&M Phase
+2008,post-main gate,A400M,7,16,A400M,D&M Phase
+2009,Post-Main Investment Decision Projects,A400M,103,112,A400M,D&M Phase
+2010,Post-Main Gate Projects,A400M,60,69,A400M,D&M Phase
+2011,Post-main-gate projects,A400M,25,37,A400M,D&M Phase
+2012,Post-main-gate projects,A400M,18,33,A400M,D&M Phase
+2013,Post-main-gate projects,A400M,13,31,A400M,D&M Phase
+2014,Post-Main-Gate projects,A400M,10,24,A400M,D&M Phase
+2015,Post-Main-Gate projects,A400M,10,27,A400M,D&M Phase
+2005,pre-main gate,ADVANCED JET TRAINER,132,133,ADVANCED JET TRAINER,Assessment Phase Projects
+2006,pre-main gate,ADVANCED JET TRAINER (AJT),157,158,ADVANCED JET TRAINER,Assessment Phase Projects
+2008,post-main gate,ADVANCED JET TRAINER,17,22,ADVANCED JET TRAINER,D&M Phase
+2005,post-main gate,AIRBORNE STAND-OFF RADAR (ASTOR),12,17,Airborne Stand Off Radar (ASTOR),D&M Phase
+2010,Support Projects,Airborne Stand Off Radar,252,261,Airborne Stand Off Radar (ASTOR),Support Projects
+2009,Pre-Main Investment Decision,Helix,305,307,Airseeker,Assessment Phase Projects
+2010,Assessment Phase Projects,Helix,29,31,Airseeker,Assessment Phase Projects
+2011,Post-main-gate projects,Airseeker,38,50,Airseeker,D&M Phase
+2012,Post-main-gate projects,Airseeker,34,49,Airseeker,D&M Phase
+2013,Concept phase projects,Attack Helicopter Capability Sustainment Programme,242,243,Apache Attack Helicopter Capability Sustainment Programme,Concept phase projects
+2014,Concept phase projects,Attack Helicopter Capability Sustainment Programme,246,247,Apache Attack Helicopter Capability Sustainment Programme,Concept phase projects
+2015,Assessment phase projects,Apache Attack Helicopter Capability Sustainment Programme,216,221,Apache Attack Helicopter Capability Sustainment Programme,Assessment Phase Projects
+2005,post-main gate,ASTUTE CLASS SUBMARINE,18,23,Astute Class Submarines,D&M Phase
+2006,post-main gate,ASTUTE CLASS SUBMARINE,15,22,Astute Class Submarines,D&M Phase
+2007,post-main gate,ASTUTE CLASS SUBMARINE,17,26,Astute Class Submarines,D&M Phase
+2008,post-main gate,ASTUTE CLASS SUBMARINE,23,30,Astute Class Submarines,D&M Phase
+2009,Post-Main Investment Decision Projects,Astute Class Submarines,113,129,Astute Class Submarines,D&M Phase
+2010,Post-Main Gate Projects,Astute Class Submarines,70,87,Astute Class Submarines,D&M Phase
+2011,Post-main-gate projects,Astute Class Submarines,51,76,Astute Class Submarines,D&M Phase
+2012,Post-main-gate projects,Astute Class Submarines,50,80,Astute Class Submarines,D&M Phase
+2013,Post-main-gate projects,Astute Class Submarines,32,67,Astute Class Submarines,D&M Phase
+2014,Post-Main-Gate projects,Astute Class Submarines,25,57,Astute Class Submarines,D&M Phase
+2015,Post-Main-Gate projects,Astute Class Submarines,28,55,Astute Class Submarines,D&M Phase
+2009,Support Projects,Attack Helicopter,55,62,Attack Helicopter,Support Projects
+2005,post-main gate,BEYOND VISUAL RANGE AIR TO AIR MISSILE (BVRAAM),30,35,Beyond Visual Range Air to Air Missile,D&M Phase
+2006,post-main gate,BEYOND VISUAL RANGE AIR TO AIR MISSILE (BVRAAM),23,30,Beyond Visual Range Air to Air Missile,D&M Phase
+2007,post-main gate,BEYOND VISUAL RANGE AIR TO AIR MISSILE (BVRAAM),27,34,Beyond Visual Range Air to Air Missile,D&M Phase
+2008,post-main gate,BEYOND VISUAL RANGE AIR TO AIR MISSILE,31,42,Beyond Visual Range Air to Air Missile,D&M Phase
+2009,Post-Main Investment Decision Projects,Beyond Visual Range Air-to-Air Missile,130,139,Beyond Visual Range Air to Air Missile,D&M Phase
+2010,Post-Main Gate Projects,Beyond Visual Range Air to Air Missile,88,96,Beyond Visual Range Air to Air Missile,D&M Phase
+2011,Post-main-gate projects,Beyond Visual Range Air-to-Air Missile,77,90,Beyond Visual Range Air to Air Missile,D&M Phase
+2012,Post-main-gate projects,Beyond Visual Range Air-to-Air Missile,81,95,Beyond Visual Range Air to Air Missile,D&M Phase
+2005,post-main gate,BOWMAN,24,29,Bowman,D&M Phase
+2006,post-main gate,BOWMAN,31,38,Bowman,D&M Phase
+2007,post-main gate,BOWMAN,35,42,Bowman,D&M Phase
+2010,Support Projects,Bowman,262,271,Bowman,Support Projects
+2006,post-main gate,BRIMSTONE,39,46,BRIMSTONE,D&M Phase
+2007,post-main gate,BRIMSTONE,43,50,BRIMSTONE,D&M Phase
+2005,post-main gate,C-VEHICLE CAPABILITY,36,41,C Vehicle PFI,D&M Phase
+2006,post-main gate,C VEHICLE CAPABILITY - PFI,55,62,C Vehicle PFI,D&M Phase
+2007,post-main gate,C VEHICLE CAPABILITY - PFI,51,60,C Vehicle PFI,D&M Phase
+2010,Support Projects,C Vehicle PFI,272,280,C Vehicle PFI,Support Projects
+2011,Assessment phase projects,Chinook New Buy,272,276,Chinook New Buy,Assessment Phase Projects
+2012,Post-main-gate projects,Chinook New Buy,96,113,Chinook New Buy,D&M Phase
+2011,Assessment phase projects,Cipher,277,281,Cipher,Assessment Phase Projects
+2012,Assessment phase projects,Cipher,345,351,Cipher,Assessment Phase Projects
+2013,Assessment phase projects,Cipher,218,224,Cipher,Assessment Phase Projects
+2014,Assessment phase projects,Cipher,204,210,Cipher,Assessment Phase Projects
+2005,post-main gate,"COMBAT, DBL INFRASTRUCTURE AND PLATFORM BISA (CIP)",42,47,"COMBAT, DBL INFRASTRUCTURE AND PLATFORM BISA (CIP)",D&M Phase
+2006,post-main gate,"CIP - COMBAT, DBL INFRASTRUCTURE, PLATFORM BISA",47,54,"COMBAT, DBL INFRASTRUCTURE AND PLATFORM BISA (CIP)",D&M Phase
+2012,Post-main-gate projects,Complex Weapons Pipeline,114,133,Complex Weapons Pipeline,D&M Phase
+2013,Post-main-gate projects,Complex Weapons Pipeline,68,89,Complex Weapons Pipeline,D&M Phase
+2014,Post-Main-Gate projects,Complex Weapons Pipeline,58,81,Complex Weapons Pipeline,D&M Phase
+2015,Post-Main-Gate projects,Complex Weapons Pipeline,56,80,Complex Weapons Pipeline,D&M Phase
+2012,Assessment phase projects,Core Production Capability,352,357,Core Production Capability,Assessment Phase Projects
+2013,Post-main-gate projects,Core Production Capability,90,98,Core Production Capability,D&M Phase
+2014,Post-Main-Gate projects,Core Production Capability,82,90,Core Production Capability,D&M Phase
+2015,Post-Main-Gate projects,Core Production Capability,81,91,Core Production Capability,D&M Phase
+2014,Assessment phase projects,Crowsnest,211,216,Crowsnest,Assessment Phase Projects
+2015,Assessment phase projects,Crowsnest,222,227,Crowsnest,Assessment Phase Projects
+2008,pre-main gate,EAGLE,189,192,EAGLE,Assessment Phase Projects
+2010,Assessment Phase Projects,Eagle/Sustain Sentry,55,59,Eagle/Sustain Sentry,Assessment Phase Projects
+2005,pre-main gate,FALCON,136,139,Falcon,Assessment Phase Projects
+2006,pre-main gate,FALCON,159,160,Falcon,Assessment Phase Projects
+2007,post-main gate,FALCON,61,68,Falcon,D&M Phase
+2008,post-main gate,FALCON,43,50,Falcon,D&M Phase
+2009,Post-Main Investment Decision Projects,Falcon,140,155,Falcon,D&M Phase
+2010,Post-Main Gate Projects,Falcon,97,110,Falcon,D&M Phase
+2012,Post-main-gate projects,Falcon,134,171,Falcon,D&M Phase
+2005,pre-main gate,FUTURE INTEGRATED SOLDIER TECHNOLOGY ( FIST),142,143,Future Integrated Soldier Technology,Assessment Phase Projects
+2006,pre-main gate,FUTURE INTEGRATED SOLDIER TECHNOLOGY (FIST),165,166,Future Integrated Soldier Technology,Assessment Phase Projects
+2007,pre-main gate,FUTURE INTEGRATED SOLDIER TECHNOLOGY (FIST),181,182,Future Integrated Soldier Technology,Assessment Phase Projects
+2008,pre-main gate,FUTURE INTEGRATED SOLDIER TECHNOLOGY,197,200,Future Integrated Soldier Technology,Assessment Phase Projects
+2009,Pre-Main Investment Decision,Future Integrated Soldier Technology,297,300,Future Integrated Soldier Technology,Assessment Phase Projects
+2010,Assessment Phase Projects,Future Integrated Soldier Technology,21,24,Future Integrated Soldier Technology,Assessment Phase Projects
+2006,pre-main gate,FUTURE RAPID EFFECT SYSTEM (FRES),167,168,Future Rapid Effects System,Assessment Phase Projects
+2007,pre-main gate,FUTURE RAPID EFFECT SYSTEM (FRES),183,186,Future Rapid Effects System,Assessment Phase Projects
+2008,pre-main gate,FUTURE RAPID EFFECT SYSTEM,201,204,Future Rapid Effects System,Assessment Phase Projects
+2008,pre-main gate,FUTURE STRATEGIC TANKER AIRCRAFT,205,206,Future Rapid Effects System,Assessment Phase Projects
+2008,post-main gate,FUTURE LYNX,61,68,Future Rapid Effects System,D&M Phase
+2009,Pre-Main Investment Decision,Future Rapid Effect System,301,304,Future Rapid Effects System,Assessment Phase Projects
+2010,Assessment Phase Projects,Future Rapid Effects System,25,28,Future Rapid Effects System,Assessment Phase Projects
+2005,pre-main gate,FUTURE STRATEGIC TANKER AIRCRAFT (FSTA),144,145,Future Strategic Tanker Aircraft (Voyager),Assessment Phase Projects
+2006,pre-main gate,FUTURE STRATEGIC TANKER AIRCRAFT (FSTA),169,170,Future Strategic Tanker Aircraft (Voyager),Assessment Phase Projects
+2007,pre-main gate,FUTURE STRATEGIC TANKER AIRCRAFT (FSTA),187,188,Future Strategic Tanker Aircraft (Voyager),Assessment Phase Projects
+2009,Post-Main Investment Decision Projects,Future Strategic Tanker Aircraft,166,175,Future Strategic Tanker Aircraft (Voyager),D&M Phase
+2010,Post-Main Gate Projects,Future Strategic Tanker Aircraft,111,119,Future Strategic Tanker Aircraft (Voyager),D&M Phase
+2011,Post-main-gate projects,Future Strategic Tanker Aircraft,91,101,Future Strategic Tanker Aircraft (Voyager),D&M Phase
+2012,Post-main-gate projects,Future Strategic Tanker Aircraft,172,184,Future Strategic Tanker Aircraft (Voyager),D&M Phase
+2013,Post-main-gate projects,Future Strategic Tanker Aircraft,99,113,Future Strategic Tanker Aircraft (Voyager),D&M Phase
+2014,Post-Main-Gate projects,Future Strategic Tanker Aircraft (Voyager),91,103,Future Strategic Tanker Aircraft (Voyager),D&M Phase
+2015,Post-Main-Gate projects,Future Strategic Tanker Aircraft (Voyager),191,202,Future Strategic Tanker Aircraft (Voyager),D&M Phase
+2005,post-main gate,GUIDED MULTIPLE LAUNCH ROCKET SYSTEM (GMLRS),48,53,GUIDED MULTIPLE LAUNCH ROCKET SYSTEM (GMLRS),D&M Phase
+2006,post-main gate,GUIDED MULTIPLE LAUNCH ROCKET SYSTEM (GMLRS),63,68,GUIDED MULTIPLE LAUNCH ROCKET SYSTEM (GMLRS),D&M Phase
+2007,post-main gate,GUIDED MULTIPLE LAUNCH ROCKET SYSTEM (GMLRS),69,76,GUIDED MULTIPLE LAUNCH ROCKET SYSTEM (GMLRS),D&M Phase
+2009,Support Projects,Hercules,63,70,Hercules,Support Projects
+2005,pre-main gate,INDIRECT FIRE PRECISION ATTACK (IFPA),148,149,Indirect Fire Precision Attack,Assessment Phase Projects
+2006,pre-main gate,INDIRECT FIRE PRECISION ATTACK (IFPA),171,172,Indirect Fire Precision Attack,Assessment Phase Projects
+2007,pre-main gate,INDIRECT FIRE PRECISION ATTACK (IFPA),189,190,Indirect Fire Precision Attack,Assessment Phase Projects
+2008,pre-main gate,INDIRECT FIRE PRECISION ATTACK,207,210,Indirect Fire Precision Attack,Assessment Phase Projects
+2009,Pre-Main Investment Decision,Indirect Fire Precision Attack,308,314,Indirect Fire Precision Attack,Assessment Phase Projects
+2010,Assessment Phase Projects,Indirect Fire Precision Attack,32,39,Indirect Fire Precision Attack,Assessment Phase Projects
+2011,Assessment phase projects,Indirect Fire Precision Attack,282,289,Indirect Fire Precision Attack,Assessment Phase Projects
+2005,post-main gate,FUTURE JOINT COMBAT AIRCRAFT (JCA),54,59,Joint Combat Aircraft (Lightning II),D&M Phase
+2006,post-main gate,JOINT COMBAT AIRCRAFT,69,76,Joint Combat Aircraft (Lightning II),D&M Phase
+2007,post-main gate,JOINT COMBAT AIRCRAFT (JCA),77,84,Joint Combat Aircraft (Lightning II),D&M Phase
+2008,post-main gate,FUTURE JOINT COMBAT AIRCRAFT,51,60,Joint Combat Aircraft (Lightning II),D&M Phase
+2009,Post-Main Investment Decision Projects,Future Joint Combat Aircraft,156,165,Joint Combat Aircraft (Lightning II),D&M Phase
+2010,Post-Main Gate Projects,Joint Combat Aircraft,120,130,Joint Combat Aircraft (Lightning II),D&M Phase
+2011,Post-main-gate projects,Joint Combat Aircraft,102,117,Joint Combat Aircraft (Lightning II),D&M Phase
+2012,Post-main-gate projects,Joint Combat Aircraft,185,208,Joint Combat Aircraft (Lightning II),D&M Phase
+2013,Post-main-gate projects,Lightning II,114,136,Joint Combat Aircraft (Lightning II),D&M Phase
+2014,Post-Main-Gate projects,Lightning II,104,126,Joint Combat Aircraft (Lightning II),D&M Phase
+2015,Post-Main-Gate projects,Lightning II,92,109,Joint Combat Aircraft (Lightning II),D&M Phase
+2005,pre-main gate,LAND ENVIRONMENT AIR PICTURE PROVISION (LEAPP),146,147,LAND ENVIRONMENT AIR PICTURE PROVISION (LEAPP),Assessment Phase Projects
+2005,post-main gate,LIGHT FORCES ANTI-TANK GUIDED WEAPON (LFATGW),60,65,LIGHT FORCES ANTI-TANK GUIDED WEAPON (LFATGW),D&M Phase
+2006,post-main gate,LIGHT FORCES ANTI-TANK GUIDED WEAPON,77,82,LIGHT FORCES ANTI-TANK GUIDED WEAPON (LFATGW),D&M Phase
+2009,Post-Main Investment Decision Projects,Lynx Wildcat,176,187,Lynx Wildcat,D&M Phase
+2010,Post-Main Gate Projects,Lynx Wildcat,131,141,Lynx Wildcat,D&M Phase
+2011,Post-main-gate projects,Lynx Wildcat,118,136,Lynx Wildcat,D&M Phase
+2012,Post-main-gate projects,Lynx Wildcat,209,231,Lynx Wildcat,D&M Phase
+2007,pre-main gate,"MARITIME, AIRBORNE, SURVEILLANCE, AND CONTROL (MASC)",191,192,"Maritime, Airborne, Surveillance & Control (MASC)",Assessment Phase Projects
+2008,pre-main gate,"MARITIME, AIRBORNE, SURVEILLANCE AND CONTROL",211,212,"Maritime, Airborne, Surveillance & Control (MASC)",Assessment Phase Projects
+2009,Pre-Main Investment Decision,"Maritime, Airborne, Surveillance & Control",318,321,"Maritime, Airborne, Surveillance & Control (MASC)",Assessment Phase Projects
+2009,Pre-Main Investment Decision,Joint Military Air Traffic Services,315,317,Marshall,Assessment Phase Projects
+2010,Assessment Phase Projects,Joint Military Air Traffic Services,40,42,Marshall,Assessment Phase Projects
+2011,Assessment phase projects,Marshall (formerly Joint Military Air Traffic Services),290,294,Marshall,Assessment Phase Projects
+2012,Assessment phase projects,Marshall,358,363,Marshall,Assessment Phase Projects
+2014,Assessment phase projects,Marshall,217,222,Marshall,Assessment Phase Projects
+2015,Post-Main-Gate projects,Marshall,110,117,Marshall,D&M Phase
+2007,post-main gate,MERLIN CAPABILITY SUSTAINMENT PROGRAMME (MCSP),85,92,Merlin Capability Sustainment Programme,D&M Phase
+2008,post-main gate,MERLIN CAPABILITY SUSTAINMENT PROGRAMME,69,76,Merlin Capability Sustainment Programme,D&M Phase
+2009,Post-Main Investment Decision Projects,Merlin Mk1 Capability Sustainment Programme,188,195,Merlin Capability Sustainment Programme,D&M Phase
+2010,Post-Main Gate Projects,Merlin Capability Sustainment Programme,142,148,Merlin Capability Sustainment Programme,D&M Phase
+2011,Post-main-gate projects,Merlin Capability Sustainment Programme,137,147,Merlin Capability Sustainment Programme,D&M Phase
+2012,Post-main-gate projects,Merlin Capability Sustainment Programme,232,246,Merlin Capability Sustainment Programme,D&M Phase
+2006,pre-main gate,MILITARY AFLOAT REACH AND SUSTAINABILTY,173,174,Military Afloat Reach and Sustainability,Assessment Phase Projects
+2007,pre-main gate,MILITARY AFLOAT REACH AND SUSTAINABILITY (MARS),193,194,Military Afloat Reach and Sustainability,Assessment Phase Projects
+2008,pre-main gate,MILITARY AFLOAT REACH AND SUSTAINABILITY,213,216,Military Afloat Reach and Sustainability,Assessment Phase Projects
+2009,Pre-Main Investment Decision,Military Afloat Reach and Sustainability,322,325,Military Afloat Reach and Sustainability,Assessment Phase Projects
+2010,Assessment Phase Projects,Maritime Afloat and Reach Sustainability,43,46,Military Afloat Reach and Sustainability,Assessment Phase Projects
+2011,Assessment phase projects,Military Afloat Reach and Sustainability,295,299,Military Afloat Reach and Sustainability,Assessment Phase Projects
+2012,Assessment phase projects,Military Afloat Reach and Sustainability,364,370,Military Afloat Reach and Sustainability,Assessment Phase Projects
+2013,Post-main-gate projects,Military Afloat Reach and Sustainability,137,147,Military Afloat Reach and Sustainability,D&M Phase
+2014,Post-Main-Gate projects,Military Afloat Reach and Sustainability,127,134,Military Afloat Reach and Sustainability,D&M Phase
+2015,Post-Main-Gate projects,Military Afloat Reach and Sustainability,118,127,Military Afloat Reach and Sustainability,D&M Phase
+2008,post-main gate,MODERNISED TARGET ACQUISITION DESIGNATION SIGHT / PILOTS NIGHT VISION SENSOR,77,84,MODERNISED TARGET ACQUISITION DESIGNATION SIGHT / PILOTS NIGHT VISION SENSOR,D&M Phase
+2014,Assessment phase projects,Morpheus,223,228,Morpheus,Assessment Phase Projects
+2015,Assessment phase projects,Morpheus,228,234,Morpheus,Assessment Phase Projects
+2008,post-main gate,NAVAL EXTREMELY HIGH FREQUENCY/SUPER HIGH FREQUENCY SATELLITE COMMUNICATIONS TERMINALS,85,94,NAVAL EXTREMELY HIGH FREQUENCY/SUPER HIGH FREQUENCY SATELLITE COMMUNICATIONS TERMINALS,D&M Phase
+2012,Assessment phase projects,Network Enabled Airspace Defence and Surveillance,371,378,Network Enabled Airspace Defence and Surveillance,Assessment Phase Projects
+2005,post-main gate,NEXT GENERATION LIGHT ANTI-ARMOUR WEAPON (NLAW),66,71,NEXT GENERATION LIGHT ANTI-ARMOUR WEAPON (NLAW),D&M Phase
+2006,post-main gate,NEXT GENERATION LIGHT ANTI-ARMOUR WEAPON,83,88,NEXT GENERATION LIGHT ANTI-ARMOUR WEAPON (NLAW),D&M Phase
+2007,post-main gate,NEXT GENERATION LIGHT ANTI-ARMOUR WEAPON (NLAW),93,100,NEXT GENERATION LIGHT ANTI-ARMOUR WEAPON (NLAW),D&M Phase
+2008,post-main gate,NEXT GENERATION LIGHT ANTI-ARMOUR WEAPON,95,102,NEXT GENERATION LIGHT ANTI-ARMOUR WEAPON (NLAW),D&M Phase
+2005,post-main gate,NIMROD MARITIME RECONNAISSANCE & ATTACK Mk4 (NIMROD MRA4),72,79,Nimrod MRA4,D&M Phase
+2006,post-main gate,NIMROD MRA4,89,98,Nimrod MRA4,D&M Phase
+2007,post-main gate,NIMROD MRA4,101,110,Nimrod MRA4,D&M Phase
+2008,post-main gate,NIMROD MARITIME RECONNAISSANCE AND ATTACK MK4,103,116,Nimrod MRA4,D&M Phase
+2009,Support Projects,Nimrod MRA4,71,87,Nimrod MRA4,Support Projects
+2010,Post-Main Gate Projects,Nimrod MRA4,149,165,Nimrod MRA4,D&M Phase
+2006,post-main gate,PANTHER COMMAND AND LIAISON VEHICLE (CLV),99,104,PANTHER COMMAND AND LIAISON VEHICLE (CLV),D&M Phase
+2005,post-main gate,PRECISION GUIDED BOMB (PGB),80,85,PRECISION GUIDED BOMB (PGB),D&M Phase
+2006,post-main gate,PRECISION GUIDED BOMB,105,110,PRECISION GUIDED BOMB (PGB),D&M Phase
+2007,post-main gate,PRECISION GUIDED BOMB (PGB),111,116,PRECISION GUIDED BOMB (PGB),D&M Phase
+2011,Post-main-gate projects,Puma Life Extension Programme,148,157,Puma Life Extension Programme,D&M Phase
+2005,pre-main gate,FUTURE AIRCRAFT C ARRIER (CVF),134,135,Queen Elizabeth Class Aircraft Carriers,Assessment Phase Projects
+2006,pre-main gate,FUTURE AIRCRAFT CARRIER (CVF),161,164,Queen Elizabeth Class Aircraft Carriers,Assessment Phase Projects
+2007,pre-main gate,FUTURE AIRCRAFT CARRIER (CVF),175,178,Queen Elizabeth Class Aircraft Carriers,Assessment Phase Projects
+2008,pre-main gate,FUTURE AIRCRAFT CARRIER,193,196,Queen Elizabeth Class Aircraft Carriers,Assessment Phase Projects
+2009,Post-Main Investment Decision Projects,Queen Elizabeth Class (formerly Future Aircraft Carrier),196,204,Queen Elizabeth Class Aircraft Carriers,D&M Phase
+2010,Post-Main Gate Projects,Queen Elizabeth Class Aircraft Carrier,166,176,Queen Elizabeth Class Aircraft Carriers,D&M Phase
+2011,Post-main-gate projects,Queen Elizabeth Class Aircraft Carrier,158,172,Queen Elizabeth Class Aircraft Carriers,D&M Phase
+2012,Post-main-gate projects,Queen Elizabeth Class Aircraft Carriers,247,269,Queen Elizabeth Class Aircraft Carriers,D&M Phase
+2013,Post-main-gate projects,Queen Elizabeth Class Aircraft Carriers,148,169,Queen Elizabeth Class Aircraft Carriers,D&M Phase
+2014,Post-Main-Gate projects,Queen Elizabeth Class Aircraft Carriers,135,154,Queen Elizabeth Class Aircraft Carriers,D&M Phase
+2015,Post-Main-Gate projects,Queen Elizabeth Class Aircraft Carriers,128,144,Queen Elizabeth Class Aircraft Carriers,D&M Phase
+2011,Post-main-gate projects,Specialist Vehicles,173,181,Scout Specialist Vehicles,D&M Phase
+2012,Post-main-gate projects,Specialist Vehicles,270,282,Scout Specialist Vehicles,D&M Phase
+2013,Post-main-gate projects,Specialist Vehicles,170,179,Scout Specialist Vehicles,D&M Phase
+2014,Post-Main-Gate projects,Scout Specialist Vehicles,155,164,Scout Specialist Vehicles,D&M Phase
+2015,Post-Main-Gate projects,Scout Specialist Vehicles,145,155,Scout Specialist Vehicles,D&M Phase
+2007,pre-main gate,SEARCH AND RESCUE - HELICOPTER (SAR-H),195,196,Search and Rescue Helicopter,Assessment Phase Projects
+2008,pre-main gate,SEARCH AND RESCUE HELICOPTER,217,218,Search and Rescue Helicopter,Assessment Phase Projects
+2009,Pre-Main Investment Decision,Search & Rescue Helicopter,326,328,Search and Rescue Helicopter,Assessment Phase Projects
+2010,Assessment Phase Projects,Search and Rescue Helicopter,51,54,Search and Rescue Helicopter,Assessment Phase Projects
+2011,Assessment phase projects,Search and Rescue Helicopter,305,309,Search and Rescue Helicopter,Assessment Phase Projects
+2005,post-main gate,SKYNET 5,86,91,Skynet 5,D&M Phase
+2009,Support Projects,Skynet 5,88,94,Skynet 5,Support Projects
+2009,Pre-Main Investment Decision,Dabinett,292,296,Solomon (formerly Dabinet),Assessment Phase Projects
+2010,Assessment Phase Projects,Dabinet,17,20,Solomon (formerly Dabinet),Assessment Phase Projects
+2011,Assessment phase projects,Solomon (formerly Dabinet),310,315,Solomon (formerly Dabinet),Assessment Phase Projects
+2007,post-main gate,SOOTHSAYER,117,122,SOOTHSAYER,D&M Phase
+2008,post-main gate,SOOTHSAYER,117,124,SOOTHSAYER,D&M Phase
+2012,Assessment phase projects,Spearfish Upgrade,379,384,Spearfish Upgrade,Assessment Phase Projects
+2005,post-main gate,STING RAY LIGHTWEIGHT TORPEDO LIFE EXTENSION & CAPABILITY UPGRADE,92,97,STING RAY LIFE EXTENSION & CAPABILITY UPGRADE (SRLE),D&M Phase
+2006,post-main gate,STING RAY LIFE EXTENSION & CAPABILITY UPGRADE (SRLE),111,116,STING RAY LIFE EXTENSION & CAPABILITY UPGRADE (SRLE),D&M Phase
+2007,post-main gate,STING RAY LIFE EXTENSION & CAPABILITY UPGRADE (SRLE),123,130,STING RAY LIFE EXTENSION & CAPABILITY UPGRADE (SRLE),D&M Phase
+2008,post-main gate,STINGRAY LIFE EXTENSION & CAPABILITY UPGRADE,125,132,STING RAY LIFE EXTENSION & CAPABILITY UPGRADE (SRLE),D&M Phase
+2012,Assessment phase projects,Successor,385,393,Successor,Assessment Phase Projects
+2013,Assessment phase projects,Successor,225,232,Successor,Assessment Phase Projects
+2014,Assessment phase projects,Successor,229,236,Successor,Assessment Phase Projects
+2015,Assessment phase projects,Successor,235,242,Successor,Assessment Phase Projects
+2005,post-main gate,SUPPORT VEHICLE,98,105,SUPPORT VEHICLE,D&M Phase
+2006,post-main gate,SUPPORT VEHICLE (SV),117,126,SUPPORT VEHICLE,D&M Phase
+2007,post-main gate,SUPPORT VEHICLE (SV),131,140,SUPPORT VEHICLE,D&M Phase
+2008,post-main gate,SUPPORT VEHICLE,133,142,SUPPORT VEHICLE,D&M Phase
+2009,Post-Main Investment Decision Projects,Support Vehicles,205,215,SUPPORT VEHICLE,D&M Phase
+2010,Support Projects,Support Vehicle,281,291,SUPPORT VEHICLE,Support Projects
+2005,post-main gate,TERRIER,106,111,TERRIER,D&M Phase
+2006,post-main gate,TERRIER,127,132,TERRIER,D&M Phase
+2007,post-main gate,TERRIER,141,148,TERRIER,D&M Phase
+2008,post-main gate,TERRIER,143,150,TERRIER,D&M Phase
+2009,Post-Main Investment Decision Projects,Terrier,216,225,TERRIER,D&M Phase
+2009,Support Projects,Tornado,95,102,Tornado,Support Projects
+2010,Post-Main Gate Projects,Tornado Capability Upgrade Strategy (Pilot),177,185,Tornado Capability Upgrade Strategy (Pilot),D&M Phase
+2006,post-main gate,TROJAN and TITAN,133,138,Trojan and Titan,D&M Phase
+2010,Support Projects,Trojan and Titan,292,299,Trojan and Titan,Support Projects
+2011,Assessment phase projects,Type 26 Global Combat Ship,316,321,Type 26 Global Combat Ship,Assessment Phase Projects
+2012,Assessment phase projects,Type 26 Global Combat Ship,394,401,Type 26 Global Combat Ship,Assessment Phase Projects
+2013,Assessment phase projects,Type 26 Global Combat Ship,233,241,Type 26 Global Combat Ship,Assessment Phase Projects
+2014,Assessment phase projects,Type 26 Global Combat Ship,237,245,Type 26 Global Combat Ship,Assessment Phase Projects
+2015,Post-Main-Gate projects,Type 26 Global Combat Ship,156,163,Type 26 Global Combat Ship,D&M Phase
+2005,post-main gate,TYPE 45 DESTROYER,112,117,Type 45 Destroyer,D&M Phase
+2006,post-main gate,T45 DESTROYER,147,156,Type 45 Destroyer,D&M Phase
+2007,post-main gate,TYPE 45 DESTROYER,149,158,Type 45 Destroyer,D&M Phase
+2008,post-main gate,TYPE 45 DESTROYER,169,180,Type 45 Destroyer,D&M Phase
+2009,Post-Main Investment Decision Projects,Type 45 Destroyer,226,239,Type 45 Destroyer,D&M Phase
+2010,Post-Main Gate Projects,Type 45 Destroyer,186,201,Type 45 Destroyer,D&M Phase
+2011,Post-main-gate projects,Type 45 Destroyer,182,203,Type 45 Destroyer,D&M Phase
+2012,Post-main-gate projects,Type 45 Destroyer,283,308,Type 45 Destroyer,D&M Phase
+2005,post-main gate,TYPHOON,118,125,Typhoon,D&M Phase
+2006,post-main gate,TYPHOON,139,146,Typhoon,D&M Phase
+2007,post-main gate,TYPHOON,159,168,Typhoon,D&M Phase
+2008,post-main gate,TYPHOON,151,162,Typhoon,D&M Phase
+2009,Post-Main Investment Decision Projects,Typhoon,240,256,Typhoon,D&M Phase
+2010,Post-Main Gate Projects,Typhoon,202,217,Typhoon,D&M Phase
+2011,Post-main-gate projects,Typhoon,204,224,Typhoon,D&M Phase
+2012,Post-main-gate projects,Typhoon,309,332,Typhoon,D&M Phase
+2013,Post-main-gate projects,Typhoon,180,204,Typhoon,D&M Phase
+2014,Post-Main-Gate projects,Typhoon,165,190,Typhoon,D&M Phase
+2015,Post-Main-Gate projects,Typhoon,164,190,Typhoon,D&M Phase
+2005,post-main gate,TYPHOON AIRCREW SYNTHETIC TRAINING AIDS (ASTA),126,131,TYPHOON AIRCREW SYNTHETIC TRAINING AIDS (ASTA),D&M Phase
+2008,post-main gate,TYPHOON FUTURE CAPABILITY PROGRAMME,163,168,TYPHOON FUTURE CAPABILITY PROGRAMME,D&M Phase
+2009,Post-Main Investment Decision Projects,UK Military Flying Training System,257,280,UK Military Flying Training System,D&M Phase
+2005,pre-main gate,UK MILITARY FLYING TRAINING SYSTEM (UKMFTS),150,151,United Kingdom Co-operative Engagement Capability Frigate  and Destroyers Programme,Assessment Phase Projects
+2005,pre-main gate,UKCEC FRIGATES AND DESTROYERS PROGRAMME,140,141,United Kingdom Co-operative Engagement Capability Frigate  and Destroyers Programme,Assessment Phase Projects
+2007,pre-main gate,UKCEC FRIGATE AND DESTROYER PROGRAMME,179,180,United Kingdom Co-operative Engagement Capability Frigate  and Destroyers Programme,Assessment Phase Projects
+2009,Pre-Main Investment Decision,UKCEC Frigate and Destroyer Programme,329,332,United Kingdom Co-operative Engagement Capability Frigate  and Destroyers Programme,Assessment Phase Projects
+2011,Assessment phase projects,United Kingdom Co-operative Engagement Capability Frigate  and Destroyers Programme,322,326,United Kingdom Co-operative Engagement Capability Frigate  and Destroyers Programme,Assessment Phase Projects
+2012,Assessment phase projects,United Kingdom Co-operative Engagement Capability Frigates and Destroyers Programme,402,408,United Kingdom Co-operative Engagement Capability Frigate  and Destroyers Programme,Assessment Phase Projects
+2006,pre-main gate,UNITED KINGDOM MILITARY FLYING TRAINING SYSTEM (UKMFTS) - HOLISTIC,175,176,United Kingdom Military Flying Training System,Assessment Phase Projects
+2007,pre-main gate,UNITED KINGDOM MILITARY FLYING TRAINING SYSTEM (UKMFTS) - HOLISTIC,197,198,United Kingdom Military Flying Training System,Assessment Phase Projects
+2008,pre-main gate,UNITED KINGDOM MILITARY FLYING TRAINING SYSTEM,219,220,United Kingdom Military Flying Training System,Assessment Phase Projects
+2010,Post-Main Gate Projects,United Kingdom Military Flying Training System,218,238,United Kingdom Military Flying Training System,D&M Phase
+2011,Post-main-gate projects,United Kingdom Military Flying Training System,225,251,United Kingdom Military Flying Training System,D&M Phase
+2010,Assessment Phase Projects,Operational Utility Vehicle System,47,50,Utility Vehicles,Assessment Phase Projects
+2011,Assessment phase projects,Operational Utility Vehicle System,300,304,Utility Vehicles,Assessment Phase Projects
+2013,Concept phase projects,Utility Vehicles,244,245,Utility Vehicles,Concept phase projects
+2012,Post-main-gate projects,Warrior Capability Sustainment Programme,333,344,Warrior Capability Sustainment Programme,D&M Phase
+2013,Post-main-gate projects,Warrior Capability Sustainment Programme,205,217,Warrior Capability Sustainment Programme,D&M Phase
+2014,Post-Main-Gate projects,Warrior Capability Sustainment Programme,191,203,Warrior Capability Sustainment Programme,D&M Phase
+2015,Post-Main-Gate projects,Warrior Capability Sustainment Programme,203,215,Warrior Capability Sustainment Programme,D&M Phase
+2005,pre-main gate,WATCHKEEPER,152,153,Watchkeeper,Assessment Phase Projects
+2006,pre-main gate,WATCHKEEPER,177,178,Watchkeeper,Assessment Phase Projects
+2007,post-main gate,WATCHKEEPER,169,174,Watchkeeper,D&M Phase
+2008,post-main gate,WATCHKEEPER,181,188,Watchkeeper,D&M Phase
+2009,Post-Main Investment Decision Projects,Watchkeeper,281,291,Watchkeeper,D&M Phase
+2010,Post-Main Gate Projects,Watchkeeper,239,251,Watchkeeper,D&M Phase
+2011,Post-main-gate projects,Watchkeeper,252,271,Watchkeeper,D&M Phase
