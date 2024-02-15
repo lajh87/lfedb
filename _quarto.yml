@@ -3,11 +3,13 @@ project:
   output-dir: docs
 
 book:
-  title: "mybook"
-  author: "Jane Doe"
-  date: "8/18/2021"
+  title: "Creating LFE Database from Unstructured DAta"
+  author: ""
+  date: "15/02/2024"
   chapters:
     - index.qmd
+    - using-chat-gpt-with-r.qmd
+    - using-chat-gpt-to-extract-data.qmd
     - references.qmd
 
 bibliography: references.bib

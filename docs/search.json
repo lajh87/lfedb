@@ -2,8 +2,169 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "mybook",
+    "title": "Creating LFE Database from Unstructured DAta",
     "section": "",
     "text": "1 Preface\nThis webbook documents the code used for transforming unstructured information into json using Chat GPT."
+  },
+  {
+    "objectID": "using-chat-gpt-with-r.html",
+    "href": "using-chat-gpt-with-r.html",
+    "title": "2  Using Chat GPT with R",
+    "section": "",
+    "text": "You will need to load your open ai key as an environment variable. The simplest way to do this is\nfile.edit(\"~/.Renviron\")\nOPEN_API_KEY = &lt;INSERT OPEN AI KEY&gt;\nThe restart R.\nYou can access the key as follows.\n\nkey &lt;- Sys.getenv(\"OPENAI_API_KEY\")\n\nThere is an openai package from cran. It is still being developed and subject to change.\n\nlibrary(openai)\nout &lt;- create_chat_completion(\n    model = \"gpt-3.5-turbo\",\n    messages = list(\n        list(\n            \"role\" = \"system\",\n            \"content\" = \"You are a helpful assistant.\"\n        ),\n        list(\n            \"role\" = \"user\",\n            \"content\" = \"Who won the world series in 2020?\"\n        ),\n        list(\n            \"role\" = \"assistant\",\n            \"content\" = \"The Los Angeles Dodgers won the World Series in 2020.\"\n        ),\n        list(\n            \"role\" = \"user\",\n            \"content\" = \"Where was it played?\"\n        )\n    )\n)\n\nout$choices$message.content\n\n[1] \"The 2020 World Series was played at Globe Life Field in Arlington, Texas.\"\n\n\nIt may well be safer to run a httr::POST request instead using the following function.\n\nlibrary(httr)\n\n\nAttaching package: 'httr'\n\n\nThe following object is masked from 'package:openai':\n\n    upload_file\n\nresp &lt;- POST(url = \"https://api.openai.com/v1/chat/completions\",\n     add_headers(`Content-Type` = \"application/json\",\n                   Authorization = glue::glue(\"Bearer {key}\")),\n     body = '{\n     \"model\": \"gpt-3.5-turbo\",\n     \"messages\": [{\"role\": \"user\", \"content\": \"Say this is a test!\"}],\n     \"temperature\": 0.7\n   }')\n\ncontent(resp)\n\n$id\n[1] \"chatcmpl-8sVDTRyZcmw0h4IMZLqT8GoBisG83\"\n\n$object\n[1] \"chat.completion\"\n\n$created\n[1] 1708000399\n\n$model\n[1] \"gpt-3.5-turbo-0613\"\n\n$choices\n$choices[[1]]\n$choices[[1]]$index\n[1] 0\n\n$choices[[1]]$message\n$choices[[1]]$message$role\n[1] \"assistant\"\n\n$choices[[1]]$message$content\n[1] \"This is a test!\"\n\n\n$choices[[1]]$logprobs\nNULL\n\n$choices[[1]]$finish_reason\n[1] \"stop\"\n\n\n\n$usage\n$usage$prompt_tokens\n[1] 13\n\n$usage$completion_tokens\n[1] 5\n\n$usage$total_tokens\n[1] 18\n\n\n$system_fingerprint\nNULL"
+  },
+  {
+    "objectID": "using-chat-gpt-to-extract-data.html",
+    "href": "using-chat-gpt-to-extract-data.html",
+    "title": "3  Using Chat GPT to Extract Data",
+    "section": "",
+    "text": "4 SECTION 1: ABOUT THE PROJECT"
+  },
+  {
+    "objectID": "using-chat-gpt-to-extract-data.html#view-file",
+    "href": "using-chat-gpt-to-extract-data.html#view-file",
+    "title": "3  Using Chat GPT to Extract Data",
+    "section": "3.1 View File",
+    "text": "3.1 View File\n\ntxt_in &lt;- readLines(\"data-raw/naompss/naomprss_2006_105_110.md\") |&gt;\n  paste(collapse =\"\\n\") \nyaml_loc &lt;- stringr::str_locate_all(txt_in, \"---\")[[1]][1:2,]\nmeta &lt;- substr(txt_in, yaml_loc[1, \"start\"], yaml_loc[2, \"end\"]) |&gt;\n  yaml::yaml.load()\n\nmd &lt;- substr(txt_in, yaml_loc[2, \"end\"]+1, nchar(txt_in)) \n\n\n3.1.1 Yaml\n\nmeta |&gt;\n  dplyr::as_tibble()\n\n# A tibble: 1 × 8\n   year project_type  project page_from page_to project_label project_type_label\n  &lt;dbl&gt; &lt;chr&gt;         &lt;chr&gt;       &lt;dbl&gt;   &lt;dbl&gt; &lt;chr&gt;         &lt;chr&gt;             \n1  2006 post-main ga… PRECIS…       105     110 PRECISION GU… D&M Phase         \n# ℹ 1 more variable: filenm &lt;chr&gt;\n\n\n\n\n3.1.2 Markdown\ncat(md)\nPOST MAIN GATE PROJECT SUMMARY SHEET\nPRECISION GUIDED BOMB\nIntegrated Project Team Responsible:\nPRECISION GUIDED BOMB\nSingle Point of Accountability for project capability: Director Equipment Capability (Deep Target Attack)\nSenior Responsible Owner for broader capability:\nCapability Manager (Precision Attack)"
+  },
+  {
+    "objectID": "using-chat-gpt-to-extract-data.html#a.-project-description-progress-and-key-future-events",
+    "href": "using-chat-gpt-to-extract-data.html#a.-project-description-progress-and-key-future-events",
+    "title": "3  Using Chat GPT to Extract Data",
+    "section": "4.1 1a. Project description, progress and key future events",
+    "text": "4.1 1a. Project description, progress and key future events\nAn all-weather, 24 hours, general-purpose bombing requirement which offered increased accuracy to reduce collateral damage was identified during the 1991 Gulf War and re-emphasised in subsequent operations. The Precision Guided Bomb (PGB) programme was established to meet this requirement and Raytheon Systems Limited (RSL), who offered the Paveway IV weapon, was selected as the Prime Contractor following international competition. Investment Appraisals Board (IAB) approval was given in June 2003 for the procurement of the Weapon System and integration onto Harrier, Tornado and Typhoon aircraft. Contract let was planned for September 2003 however, Departmental funding constraints delayed contract let and limited it to placement of the main Weapon, support and Harrier GR9 Integration Contracts. These contracts were let in December 2003. A further submission will be made once the way forward for Tornado and Typhoon integration becomes clear.\nSince contract let it has been decided to enhance further the weapon through the addition of LASER capability. This enhancement is mutually beneficial to RSL and MOD and is being delivered at no extra cost to the MOD. Progress to date is satisfactory and so far all milestones, including the Weapon System Critical Design Review, have been achieved on time or ahead of schedule. Development hardware has been provided and the qualification programme is well underway.\nThe delay to contract let is reflected in a pro-rata slip to the Main Gate In Service Date estimates although work is ongoing across the stakeholder community to recover this slip. The effect of the recovery work will become evident later in 2006 once the initial results of the qualification phase are known."
+  },
+  {
+    "objectID": "using-chat-gpt-to-extract-data.html#b.-associated-projects",
+    "href": "using-chat-gpt-to-extract-data.html#b.-associated-projects",
+    "title": "3  Using Chat GPT to Extract Data",
+    "section": "4.2 1b. Associated projects",
+    "text": "4.2 1b. Associated projects\n\n\n\n\n\n\n\n\n\nCritical to Achievement of ISD\n\nCritical to Initial Gate Requirement\n\n\n\n\n\nProject Title\nForecast ISD\nProject Title\nForecast ISD\n\n\nHarrier GR9 Capability C Upgrade\n2007\n-\n-"
+  },
+  {
+    "objectID": "using-chat-gpt-to-extract-data.html#c.-procurement-strategy",
+    "href": "using-chat-gpt-to-extract-data.html#c.-procurement-strategy",
+    "title": "3  Using Chat GPT to Extract Data",
+    "section": "4.3 1c. Procurement strategy",
+    "text": "4.3 1c. Procurement strategy\n\n\n\n\n\n\n\n\n\n\n\nContractor(s)\n\n\nContract Scope\n\n\nContract Type\n\n\nProcurement Route\n\n\n\n\n\n\nRaytheon Systems Limited (Prime Contractor)\n\n\nDemonstration to Manufacture\n\n\nFirm price\n\n\nInternational competition\n\n\n\n\nBAE Systems, Warton\n\n\nDemonstration to InService\n\n\nFirm price\n\n\nNon-competitive"
+  },
+  {
+    "objectID": "using-chat-gpt-to-extract-data.html#a.-performance-against-approved-cost",
+    "href": "using-chat-gpt-to-extract-data.html#a.-performance-against-approved-cost",
+    "title": "3  Using Chat GPT to Extract Data",
+    "section": "5.1 2a. Performance against approved cost",
+    "text": "5.1 2a. Performance against approved cost\n\n\n\n\n\n\n\n\n\n£m (outturn prices)\n\n\nProcurement Cost\n\n\n\n\n\n\nCurrent Forecast Cost\n\n\n341\n\n\n\n\nApproved Cost at Main Gate\n\n\n363\n\n\n\n\nVariation\n\n\n-22\n\n\n\n\nIn-year changes\n\n\n-11"
+  },
+  {
+    "objectID": "using-chat-gpt-to-extract-data.html#b.-reasons-for-variation-from-approved-cost",
+    "href": "using-chat-gpt-to-extract-data.html#b.-reasons-for-variation-from-approved-cost",
+    "title": "3  Using Chat GPT to Extract Data",
+    "section": "5.2 2b. Reasons for variation from approved cost",
+    "text": "5.2 2b. Reasons for variation from approved cost\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDate\n\n\nVariation (£m)\n\n\nFactor\n\n\nExplanation\n\n\n\n\n\n\nMarch 2006\n\n\n-4\n\n\nTechnical Factors\n\n\nProactive risk management has given rise to a reduction in the level of risk provision required to deliver the project. This reduction reflects the revised risk predictions following a comprehensive risk review.\n\n\n\n\nMarch 2006\n\n\n-1\n\n\nExchange Rate\n\n\nDepartmental Review - Provision for exchange rate fluctuations now taken at a corporate level.\n\n\n\n\nJanuary 2006\n\n\n-1\n\n\nChanged Requirement\n\n\nThe maturity of Data Logging technology precludes use of Data loggers at this juncture; requirement reassessed and removed.\n\n\n\n\nJune 2005\n\n\n-3\n\n\nProcurement Strategy\n\n\nReduction in forecast as a result of prudent Integrated Test Evaluation and Acceptance (ITEA) management.\n\n\n\n\nJune 2005\n\n\n-2\n\n\nChanged Requirement\n\n\nReassessment of the quantity of training rounds required.\n\n\n\n\nDate\n\n\nVariation (£m)\n\n\nFactor\n\n\nExplanation\n\n\n\n\nHistoric\n\n\n+13\n\n\nChanged Budgetary Priorities\n\n\nIncrease in Tornado integration cost due to DEC Option to delay integration by a further 2 years, then a further 1 year (+£10m, +£8m). Customer 1 (DEC(DTA)) reduction in Equipment Plan 2005 (-£2m). Reduction in forecast against the Control Total at the start of the Financial Year as a result of RSL risk reduction work (-£3m).\n\n\n\n\nHistoric\n\n\n-24\n\n\nRisk Differential\n\n\nDifference between the risk allowed for in the most likely (50%) and highest acceptable (90%) estimates at Main Gate.\n\n\n\n\nNet Variation\n\n\n-22"
+  },
+  {
+    "objectID": "using-chat-gpt-to-extract-data.html#c.-expenditure-to-date",
+    "href": "using-chat-gpt-to-extract-data.html#c.-expenditure-to-date",
+    "title": "3  Using Chat GPT to Extract Data",
+    "section": "5.3 2c. Expenditure to date",
+    "text": "5.3 2c. Expenditure to date\n\n\n\n\n\n\n\n\n\nExpenditure to 31 March 2006 (£m)\n\n\n90\n\n\n\n\n\n\n2d. Years of peak procurement expenditure\n\n\n\n\n\n\n2006/2007\n\n\n2007/2008"
+  },
+  {
+    "objectID": "using-chat-gpt-to-extract-data.html#e.-unit-production-cost",
+    "href": "using-chat-gpt-to-extract-data.html#e.-unit-production-cost",
+    "title": "3  Using Chat GPT to Extract Data",
+    "section": "5.4 2e. Unit production cost",
+    "text": "5.4 2e. Unit production cost\n\n\n\n\n\n\n\n\n\n\n\nUnit Production Cost (£m)\n\n\nQuantities Required\n\n\n\n\n\n\nat Main Gate\n\n\nCurrent\n\n\nat Main Gate\n\n\nCurrent\n\n\n\n\n0.03\n\n\n0.03\n\n\n2303\n\n\n2303"
+  },
+  {
+    "objectID": "using-chat-gpt-to-extract-data.html#a.-definition-of-in-service-date",
+    "href": "using-chat-gpt-to-extract-data.html#a.-definition-of-in-service-date",
+    "title": "3  Using Chat GPT to Extract Data",
+    "section": "6.1 3a. Definition of in-service date",
+    "text": "6.1 3a. Definition of in-service date\n\n\n\n\n\n\n\n\n\nISD Definition:\n\n\nDelivery of 96 weapons, the modification of 12 aircraft of one aircraft type, sufficient trained air and ground crew, all necessary support and a cleared Operational Flight Programme."
+  },
+  {
+    "objectID": "using-chat-gpt-to-extract-data.html#b.-performance-against-approved-in-service-date",
+    "href": "using-chat-gpt-to-extract-data.html#b.-performance-against-approved-in-service-date",
+    "title": "3  Using Chat GPT to Extract Data",
+    "section": "6.2 3b. Performance against approved in-service date",
+    "text": "6.2 3b. Performance against approved in-service date\n\n\n\n\n\n\n\n\n\n\n\nDate\n\n\n\n\n\n\nCurrent Forecast ISD\n\n\nSeptember 2007\n\n\n\n\nApproved ISD at Main Gate\n\n\nDecember 2007\n\n\n\n\nVariation (Months)\n\n\n-3\n\n\n\n\nIn-year changes\n\n\n0"
+  },
+  {
+    "objectID": "using-chat-gpt-to-extract-data.html#c.-reasons-for-variation-from-approved-isd",
+    "href": "using-chat-gpt-to-extract-data.html#c.-reasons-for-variation-from-approved-isd",
+    "title": "3  Using Chat GPT to Extract Data",
+    "section": "6.3 3c. Reasons for variation from approved ISD",
+    "text": "6.3 3c. Reasons for variation from approved ISD\n\n\n\n\n\n\n\n\n\n\n\nDate\n\n\nVariation (months)\n\n\nFactor\n\n\nExplanation\n\n\n\n\n\n\nHistoric\n\n\n+3\n\n\nContracting Process\n\n\nDelay to Contract award due to the wider constraints on Defence commitments, in particular restrictions on committing In-Year funds.\n\n\n\n\nHistoric\n\n\n-6\n\n\nRisk Differential\n\n\nDifference between the risk allowed for in the most likely (50%) and the highest acceptable (90%) estimates at Main Gate.\n\n\n\n\nNet Variation\n\n\n-3"
+  },
+  {
+    "objectID": "using-chat-gpt-to-extract-data.html#d.-cost-resulting-from-isd-variation",
+    "href": "using-chat-gpt-to-extract-data.html#d.-cost-resulting-from-isd-variation",
+    "title": "3  Using Chat GPT to Extract Data",
+    "section": "6.4 3d. Cost resulting from ISD variation",
+    "text": "6.4 3d. Cost resulting from ISD variation\n\n\n\n\n\n\n\n\n\n\n\n\nType of Cost/Saving\n\n\nCost £m\n\n\n\n\nSaving £m\n\n\nExplanation\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3e. Operational impact of ISD variation"
+  },
+  {
+    "objectID": "using-chat-gpt-to-extract-data.html#a.-performance-against-approved-key-user-requirements",
+    "href": "using-chat-gpt-to-extract-data.html#a.-performance-against-approved-key-user-requirements",
+    "title": "3  Using Chat GPT to Extract Data",
+    "section": "7.1 4a. Performance against approved key user requirements",
+    "text": "7.1 4a. Performance against approved key user requirements\n\n\n\n\n\n\n\n\n\n\n\n\nSerial\n\n\nKey Requirement\n\n\nForecast to be Met\n\n\nAt Risk\n\n\nNot to be\nMet\n\n\n\n\n\n\n01\n\n\nThe Over The Target Requirement (OTR) shall be no greater than that which can be achieved using Mk 82 bombs delivered with 15m Circular Error Probable (CEP).\n\n\nYes\n\n\n-\n\n\n-\n\n\n\n\n02\n\n\nThe user shall be able to achieve the OTR in allweathers.\n\n\nYes\n\n\n-\n\n\n-\n\n\n\n\n03\n\n\nThe user shall be able to achieve the OTR 24hours a day.\n\n\nYes\n\n\n-\n\n\n-\n\n\n\n\n04\n\n\nThe user shall be able to programme the weapon with new target co-ordinates in the air prior to release.\n\n\nYes\n\n\n-\n\n\n-\n\n\n\n\n05\n\n\nThe user shall be able to deliver PGBs from Tornado GR4/4A, Harrier GR9/9A and Typhoon.\n\n\nYes\n\n\n-\n\n\n-\n\n\n\n\n06\n\n\nThe user shall be able to achieve the effect at the target without causing greater damage to collateral objects than would be created by a Mk 82 bomb delivered within a CEP of 15m.\n\n\nYes\n\n\n-\n\n\n-\n\n\n\n\n07\n\n\nThe user shall be able to employ the weapon from Harrier GR9/9A on embarked operations from an Invincible Class Aircraft Carrier (CVS).\n\n\nYes\n\n\n-\n\n\n-\n\n\n\n\n08\n\n\nThe weapon shall have a 75% probability of successfully completing a mission at any stage during its life.\n\n\nYes\n\n\n-\n\n\n-\n\n\n\n\nPercentage currently forecast to be met\n\n\n\n\n100%\n\n\n\n\nIn-Year Change\n\n\n\n\n0"
+  },
+  {
+    "objectID": "using-chat-gpt-to-extract-data.html#b.-reasons-for-variation-against-approved-key-requirements",
+    "href": "using-chat-gpt-to-extract-data.html#b.-reasons-for-variation-against-approved-key-requirements",
+    "title": "3  Using Chat GPT to Extract Data",
+    "section": "7.2 4b. Reasons for variation against approved key requirements",
+    "text": "7.2 4b. Reasons for variation against approved key requirements\n\n\n\n\n\n\n\n\n\n\n\nDate\n\n\nKey Requirement\n\n\nFactor\n\n\nExplanation\n\n\n\n\n\n\n-\n\n\n-\n\n\n-"
+  },
+  {
+    "objectID": "using-chat-gpt-to-extract-data.html#a.-description-of-the-assessment-phase",
+    "href": "using-chat-gpt-to-extract-data.html#a.-description-of-the-assessment-phase",
+    "title": "3  Using Chat GPT to Extract Data",
+    "section": "8.1 5a. Description of the Assessment Phase",
+    "text": "8.1 5a. Description of the Assessment Phase\nThe purpose of the Assessment Phase was to select the preferred bidder to take forward to Main Gate. Invitations to Tender were released to six companies in October 2001 and six formal tenders were received. A two-stage Assessment Phase resulted in MBDA and Raytheon Systems Limited being taken forward into the final phase of the competition. A Combined Operational Effectiveness and Investment Appraisal (COEIA) was undertaken by DSTL and a technical and commercial assessment of the tenders was undertaken by the PGB IPT and its specialist stakeholders (including QinetiQ and BAE Systems).\nThe Main Gate Business Case was approved in June 2003. Raytheon Systems Limited, who offered the Paveway IV weapon to meet the PGB requirement, was selected as the preferred contractor."
+  },
+  {
+    "objectID": "using-chat-gpt-to-extract-data.html#b.-cost-of-the-assessment-phase",
+    "href": "using-chat-gpt-to-extract-data.html#b.-cost-of-the-assessment-phase",
+    "title": "3  Using Chat GPT to Extract Data",
+    "section": "8.2 5b. Cost of the Assessment Phase",
+    "text": "8.2 5b. Cost of the Assessment Phase\n\n\n\n\n\n\n\n\n\n\n£m (outturn prices)\n\n\nAssessment Phase cost\n\n\nProportion of total estimated procurement expenditure\n\n\n\n\n\n\nActual Cost\n\n\n5\n\n\n1.4%\n\n\n\n\nApproved Cost at Initial Gate\n\n\n3\n\n\n0.9%\n\n\n\n\nVariation\n\n\n+2"
+  },
+  {
+    "objectID": "using-chat-gpt-to-extract-data.html#c.-duration-of-assessment-phase",
+    "href": "using-chat-gpt-to-extract-data.html#c.-duration-of-assessment-phase",
+    "title": "3  Using Chat GPT to Extract Data",
+    "section": "8.3 5c. Duration of Assessment Phase",
+    "text": "8.3 5c. Duration of Assessment Phase\n\n\n\n\n\n\n\n\n\nDate of Main Gate Approval\n\n\nJune 2003\n\n\n\n\nDate of Initial Gate Approval\n\n\nJuly 2001\n\n\n\n\nLength of Assessment Phase [months]\n\n\n23"
+  },
+  {
+    "objectID": "using-chat-gpt-to-extract-data.html#d.-cost-boundaries-at-initial-gate-and-main-gate-approvals",
+    "href": "using-chat-gpt-to-extract-data.html#d.-cost-boundaries-at-initial-gate-and-main-gate-approvals",
+    "title": "3  Using Chat GPT to Extract Data",
+    "section": "8.4 5d. Cost boundaries at Initial Gate and Main Gate Approvals",
+    "text": "8.4 5d. Cost boundaries at Initial Gate and Main Gate Approvals\n\n\n\n\n\n\n\n\n\n\n\n£m (outturn prices)\n\n\nLowest\n\n\nBudgeted For\n\n\nHighest\n\n\n\n\n\n\nCost of Demonstration and Manufacture Phase forecast at Main Gate\n\n\n318\n\n\n339\n\n\n363\n\n\n\n\nExpected envelope of costs to support Demonstration and Manufacture Phase at Initial Gate\n\n\n218\n\n\n\n\n\n\n\n230"
+  },
+  {
+    "objectID": "using-chat-gpt-to-extract-data.html#e.-isd-boundaries-at-initial-gate-and-main-gate-approvals",
+    "href": "using-chat-gpt-to-extract-data.html#e.-isd-boundaries-at-initial-gate-and-main-gate-approvals",
+    "title": "3  Using Chat GPT to Extract Data",
+    "section": "8.5 5e. ISD boundaries at Initial Gate and Main Gate Approvals",
+    "text": "8.5 5e. ISD boundaries at Initial Gate and Main Gate Approvals\n\n\n\n\n\n\n\n\n\n\n\n\n\nEarliest\n\n\nBudgeted For\n\n\nLatest Acceptable\n\n\n\n\n\n\nForecast ISD at Main Gate\n\n\nSeptember 2006\n\n\nJune 2007\n\n\nDecember 2007\n\n\n\n\nEnvelope within which capability was expected to be available at Initial Gate\n\n\nJune 2006\n\n\n\n\n\n\n\nDecember 2007"
+  },
+  {
+    "objectID": "using-chat-gpt-to-extract-data.html#sections",
+    "href": "using-chat-gpt-to-extract-data.html#sections",
+    "title": "3  Using Chat GPT to Extract Data",
+    "section": "8.6 Sections",
+    "text": "8.6 Sections\n\nmd_lines &lt;- md |&gt;\n  stringr::str_split(\"\\n\") |&gt;\n  purrr::pluck(1)\n\nsection_f &lt;- md_lines |&gt;\n  stringr::str_detect(\"^#\")\n\ntitle &lt;- md_lines[section_f]\n\nsections_tbl &lt;- dplyr::tibble(title, from = which(section_f)) |&gt;\n  dplyr::mutate(to = dplyr::lead(from)-1) |&gt;\n  tidyr::replace_na(list(to = length(md_lines)))\n\nsections_tbl$nchar &lt;- purrr::pmap_int(sections_tbl, function(from, to, ...){\n  nchar(paste(md_lines[from:to], collapse = \"\\n\"))\n})\n\nsections_tbl |&gt;\n  dplyr::slice(2) \n\n# A tibble: 1 × 4\n  title                                                       from    to nchar\n  &lt;chr&gt;                                                      &lt;int&gt; &lt;dbl&gt; &lt;int&gt;\n1 ## 1a. Project description, progress and key future events    18    25  1793\n\n\nsection_md &lt;- paste(md_lines[18:25], collapse = \"\\n\")\ncat(section_md)"
+  },
+  {
+    "objectID": "using-chat-gpt-to-extract-data.html#a.-project-description-progress-and-key-future-events-1",
+    "href": "using-chat-gpt-to-extract-data.html#a.-project-description-progress-and-key-future-events-1",
+    "title": "3  Using Chat GPT to Extract Data",
+    "section": "8.7 1a. Project description, progress and key future events",
+    "text": "8.7 1a. Project description, progress and key future events\nAn all-weather, 24 hours, general-purpose bombing requirement which offered increased accuracy to reduce collateral damage was identified during the 1991 Gulf War and re-emphasised in subsequent operations. The Precision Guided Bomb (PGB) programme was established to meet this requirement and Raytheon Systems Limited (RSL), who offered the Paveway IV weapon, was selected as the Prime Contractor following international competition. Investment Appraisals Board (IAB) approval was given in June 2003 for the procurement of the Weapon System and integration onto Harrier, Tornado and Typhoon aircraft. Contract let was planned for September 2003 however, Departmental funding constraints delayed contract let and limited it to placement of the main Weapon, support and Harrier GR9 Integration Contracts. These contracts were let in December 2003. A further submission will be made once the way forward for Tornado and Typhoon integration becomes clear.\nSince contract let it has been decided to enhance further the weapon through the addition of LASER capability. This enhancement is mutually beneficial to RSL and MOD and is being delivered at no extra cost to the MOD. Progress to date is satisfactory and so far all milestones, including the Weapon System Critical Design Review, have been achieved on time or ahead of schedule. Development hardware has been provided and the qualification programme is well underway.\nThe delay to contract let is reflected in a pro-rata slip to the Main Gate In Service Date estimates although work is ongoing across the stakeholder community to recover this slip. The effect of the recovery work will become evident later in 2006 once the initial results of the qualification phase are known.\n\nlibrary(httr)\nkey &lt;- Sys.getenv(\"OPENAI_API_KEY\")\n\nbody &lt;- list(model = \"gpt-3.5-turbo\",\n   messages = list(list(\n     role = \"user\",\n     content = glue::glue(\"list the issues identified in the following text: {section_md}\")\n     )),\n     temperature = 0.7) |&gt;\njsonlite::toJSON(auto_unbox = TRUE)\n\nresp &lt;- POST(url = \"https://api.openai.com/v1/chat/completions\",\n     add_headers(`Content-Type` = \"application/json\",\n                   Authorization = glue::glue(\"Bearer {key}\")),\n     body = body)\n\n\n\ncontent(resp)\n\n$id\n[1] \"chatcmpl-8sVDXGGBByt0Gz7hPgDX1Ve4flSND\"\n\n$object\n[1] \"chat.completion\"\n\n$created\n[1] 1708000403\n\n$model\n[1] \"gpt-3.5-turbo-0613\"\n\n$choices\n$choices[[1]]\n$choices[[1]]$index\n[1] 0\n\n$choices[[1]]$message\n$choices[[1]]$message$role\n[1] \"assistant\"\n\n$choices[[1]]$message$content\n[1] \"1. Departmental funding constraints delaying contract let and limiting it to certain contracts\\n2. Uncertainty regarding the integration of the weapon onto Tornado and Typhoon aircraft\\n3. Delay in the Main Gate In Service Date estimates\\n4. The need for further enhancement of the weapon through the addition of LASER capability\\n5. The need for recovery work to meet the desired timeline for the project\"\n\n\n$choices[[1]]$logprobs\nNULL\n\n$choices[[1]]$finish_reason\n[1] \"stop\"\n\n\n\n$usage\n$usage$prompt_tokens\n[1] 360\n\n$usage$completion_tokens\n[1] 79\n\n$usage$total_tokens\n[1] 439\n\n\n$system_fingerprint\nNULL"
   }
 ]
