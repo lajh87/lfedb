@@ -13,8 +13,9 @@ book:
     - exploratory-data-analysis.qmd
     - references.qmd
 
-bibliography: references.bib
+bibliography: quarto-docs/references.bib
 
 format:
   html:
     theme: cosmo
+    df-print: paged

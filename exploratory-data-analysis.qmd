@@ -1,4 +1,30 @@
-# Exploratory Data Analysis
+# Development Strategy
+
+```{mermaid}
+flowchart LR
+  A[Define Question] --> B[Get Data] --> C[Exploratory Data Analysis] --> D[Model] --> E[Disemminate] --> A
+```
+
+## Iteration 1
+
+### Question 
+
+What issues were experienced by major projects between 2005 and 2015?
+
+### Data
+
+Major Project Reports Summary Sheets
+
+```{r}
+ readr::read_csv("data-raw/naomprss/page_splits_manual_labels.csv", 
+                    show_col_types = FALSE) |>
+  dplyr::mutate(project_type_label = tolower(project_type_label)) |>
+  dplyr::group_by(project_type_label, year) |>
+  dplyr::count()  |>
+  tidyr::pivot_wider(names_from = project_type_label, values_from = n)
+```
+
+### Exploratory Data Analysis
 
 ```{r}
 d <- "data-raw/naomprss"
