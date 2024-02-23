@@ -1,0 +1,13 @@
+---
+title: "About"
+image: profile.jpg
+about:
+  template: jolla
+  links:
+    - icon: github
+      text: Github
+      href: https://github.com/lajh87/lfedb
+
+---
+
+This blog documents the process for extracting unstructured opensource information to a structured database.
