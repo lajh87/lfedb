@@ -13,7 +13,7 @@ book:
     - exploratory-data-analysis.qmd
     - references.qmd
 
-bibliography: quarto-docs/references.bib
+bibliography: references.bib
 
 format:
   html:
