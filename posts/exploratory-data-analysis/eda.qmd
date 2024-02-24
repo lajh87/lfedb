@@ -295,6 +295,40 @@ out |>
     )
     }) |>
   dplyr::bind_rows() |>
+  dplyr::mutate(
+    content = stringr::str_split(
+      string = content, 
+      pattern = "Issue [1-9]:|^[1-9]\\.|\\s[1-9]\\.\\s")
+    ) |>
+  tidyr::unnest(content) |>
+  dplyr::filter(content != "") |>
+  dplyr::group_by(filename, heading) |>
+  dplyr::mutate(id = 1:dplyr::n(), .before = 1) |>
+  dplyr::ungroup() |>
+  dplyr::mutate(
+    content = stringr::str_split(      
+      string = content,
+      pattern = "\n"
+    )
+  ) |>
+  tidyr::unnest(content) |>
+  dplyr::mutate(content = trimws(content)) |>
+  dplyr::ungroup() |>
+  dplyr::filter(content != "") |>
+  dplyr::mutate(content = stringr::str_remove(content, "^- ")) |>
+  dplyr::mutate(
+    label = dplyr::case_when(
+      stringr::str_detect(content, "^Description|^Issue Description|^Issue") ~ "Issue",
+      stringr::str_detect(content, "^Cause") ~ "Cause",
+      stringr::str_detect(content, "^Impact") ~ "Impact",
+      TRUE ~ NA
+    )
+  ) |>
+  dplyr::relocate(label, .before = 2) |>
+  dplyr::filter(!is.na(label)) |>
+  dplyr::mutate(content = trimws(stringr::str_remove(content, "^.*?:"))) |>
+  tidyr::pivot_wider(names_from = label, values_from = content) |>
+  tidyr::unnest(c(Issue, Cause, Impact)) |>
   DT::datatable()
 ```
 
