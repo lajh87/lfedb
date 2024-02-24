@@ -281,11 +281,23 @@ out <- project_section |>
 saveRDS(out, "gpt-output.RDS")
 
 ```
+# Dissemination 
+
 
 ```{r}
 out <- readRDS("gpt-output.RDS")
-out[[1]]
+out |>
+  purrr::map(~{
+    list(
+      content = .x$content$choices[[1]]$message$content,
+      filename = .x$filename,
+      heading = .x$heading
+    )
+    }) |>
+  dplyr::bind_rows() |>
+  DT::datatable()
 ```
 
-# Dissemination 
+
+
 
