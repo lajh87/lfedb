@@ -286,7 +286,7 @@ saveRDS(out, "gpt-output.RDS")
 
 ```{r}
 out <- readRDS("gpt-output.RDS")
-out |>
+df <- out |>
   purrr::map(~{
     list(
       content = .x$content$choices[[1]]$message$content,
@@ -328,8 +328,10 @@ out |>
   dplyr::filter(!is.na(label)) |>
   dplyr::mutate(content = trimws(stringr::str_remove(content, "^.*?:"))) |>
   tidyr::pivot_wider(names_from = label, values_from = content) |>
-  tidyr::unnest(c(Issue, Cause, Impact)) |>
-  DT::datatable()
+  tidyr::unnest(c(Issue, Cause, Impact))
+
+write.csv(df, "issues-processed.csv", row.names = FALSE)
+DT::datatable(df)
 ```
 
 
