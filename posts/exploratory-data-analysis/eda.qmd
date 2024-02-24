@@ -1,0 +1,257 @@
+---
+title: "Exploratory Data Analysis"
+author: "Luke Heley"
+date: "2024-02-20"
+categories: [eda]
+---
+
+```{r}
+#| output: false
+library(ggplot2)
+library(plotly)
+```
+
+# The Data Science Process
+
+The diagram below illustrates the data science process that we follow. The focus here is on Exploratory Data Analysis (EDA). EDA involves analysing and investigating data sets to understand their main characteristics. It helps data scientists gain insights, identify patterns, detect anomalies, and test early hypotheses. By employing data visualization methods, EDA provides a better understanding of data variables and their relationships.
+
+```{mermaid}
+flowchart LR
+  A[Define Question] --> B[Get and Clean Data] --> C[Exploratory Data Analysis] --> 
+    D[Model] --> E[Disseminate] --> A
+    
+B -.-> A
+C -.-> B
+D -.-> C
+E -.-> D
+```
+
+
+# Question 
+
+What issues were experienced by major projects between 2005 and 2015?
+
+# Data
+
+```{r}
+project_meta <- readr::read_csv(
+ "../../data-raw/naomprss/page_splits_manual_labels.csv",
+ show_col_types = FALSE
+ ) |>
+  dplyr::mutate(project_type_label = dplyr::case_when(
+    project_type_label == "D&M Phase" ~ "D&M",
+    project_type_label == "Assessment Phase Projects" ~ "Assessment",
+    project_type_label == "Support Projects" ~ "Support",
+    project_type_label == "Concept phase projects" ~ "Concept",
+    TRUE ~ project_type_label
+  )) 
+```
+
+Data is sourced from NAO Major Project Reports Summary Sheets. These PDF documents have been pre-processed and converted into Markdown text documents. 
+
+# Exporatory Data Analysis
+
+## Number of Projects by Year and Phase
+
+The chart below shows the number of projects per year and by phase of project.
+
+```{r}
+g <- project_meta |>
+  dplyr::group_by(project_type_label, year) |>
+  dplyr::count()  |>
+  ggplot(aes(year, n)) + 
+  geom_bar(aes(fill = project_type_label), stat = "identity") 
+
+ggplotly(g)
+```
+
+## Project by Type
+
+The chart below shows the count of project types by project.
+
+```{r}
+g <- project_meta  |>
+  dplyr::mutate(
+    project_label = ifelse(
+      test = nchar(project_label)>30, 
+      yes = paste0(substr(project_label, 1, 30),"..."),
+      no = project_label
+    )
+  ) |>
+  dplyr::group_by(project_label, project_type_label) |>
+  dplyr::count() |>
+  ggplot() + 
+  geom_bar(
+    aes(x = factor(project_label,rev(unique(project_label))), 
+        y = n, 
+        fill = project_type_label), 
+    stat = "identity") + 
+  coord_flip() +
+  labs(x = "", y = "", fill = "")
+
+ggplotly(g, height = 1000)
+```
+## Project by Year and Type
+
+The heatmap below shows the project, year and project type.
+
+```{r}
+g <- project_meta |>
+  dplyr::mutate(
+    project_label = ifelse(
+      test = nchar(project_label)>30, 
+      yes = paste0(substr(project_label, 1, 30),"..."),
+      no = project_label
+    )
+  ) |>
+  dplyr::group_by(project_label,project_type_label, year) |>
+  dplyr::count()  |>
+  ggplot() + 
+  geom_tile(
+    aes(
+      x = year, 
+      y = factor(project_label,rev(unique(project_label))),
+      fill = project_type_label)
+    ) +
+  labs(x = "", y = "", fill = "")
+
+ggplotly(g, height = 1000)
+  
+  
+```
+
+## Project by Section
+
+The chart below shows a count of level 1 headings by year for D&M phase projects. 
+
+The data suggests that the report changed format in 2009. It also suggests that there is a need to go back and clean the headings for data from 2009 as there are many level 2 headings mislabelled as level 1 headings.
+
+```{r}
+
+d <- "../../data-raw/naomprss"
+f <- list.files(d, pattern = "md")
+sections <- purrr::map_df(file.path(d, f), ~{
+  
+  text_in <- readLines(.x) 
+  heading_i <- text_in |>
+    stringr::str_detect("^#") |>
+    which()
+  
+  file <- unlist(stringr::str_split(.x, "/"))
+  file <- tools::file_path_sans_ext(file[length(file)])
+  
+  file_split <- unlist(stringr::str_split(file, "_"))
+  year <- file_split[2]
+  page_from = file_split[3]
+  page_to = file_split[4]
+  
+  df <- dplyr::tibble(
+    heading = text_in[heading_i],
+    from = heading_i
+  ) |>
+    dplyr::mutate(
+      to = dplyr::lead(from)-1
+    ) |>
+    tidyr::replace_na(list(to = length(heading_i))) |>
+    dplyr::mutate(year = as.numeric(year),
+                  page_from = as.numeric(page_from),
+                  page_to = as.numeric(page_to)) 
+  
+  chars <- df |> purrr::pmap_dbl(function(from, to, ...){
+    nchar(paste(text_in[from:to], collapse = "\n"))
+  })
+  
+  df$nchar <- chars
+  return(df)
+})
+
+project_section <- sections |> 
+  dplyr::left_join(project_meta,
+    by = c("year", "page_from", "page_to")
+  )
+
+
+g <- project_section |>
+  dplyr::filter(project_type_label == "D&M") |>
+  dplyr::filter(stringr::str_detect(heading, "^# ")) |>
+  dplyr::mutate(heading = ifelse(
+    test = nchar(heading > 30),
+    yes = paste0(substr(heading, 1, 30), "..."),
+    no = heading
+  )) |>
+  dplyr::group_by(year, heading)  |>
+  dplyr::count() |>
+  ggplot() + geom_bar(aes(heading, n), stat = "identity") +
+  facet_grid(year ~ ., scales = "free", drop = TRUE, space = "free_y") + 
+  coord_flip()
+
+ggplotly(g, height = 2000)
+
+```
+
+In the modelling phase we extract the issues from projects within their D&M phase between 2005 and 2008.
+
+The chart below shows the number of headings by year for D&M phase projects. 
+
+The data are mostly well formed. __Some further cleaning to create uniform headers could be carried out__.
+
+```{r}
+g <- project_section |>
+  dplyr::filter(project_type_label == "D&M") |>
+  dplyr::filter(year < 2009) |>
+  group_by(heading, year) |>
+  dplyr::count() |>
+  dplyr::arrange(-n, heading) |>
+  ggplot() + geom_bar(aes(factor(heading, rev(unique(heading))), n, fill = as.factor(year)), stat = "identity") +
+  coord_flip() +
+  theme(legend.position = "bottom") + 
+  labs(x = "", y = "", fill = "")
+
+ggplotly(g, height = 1000)
+```
+# Modelling 
+
+In our analysis we loop through the headings by project and year where there is text within the heading.
+
+```{r}
+
+library(httr)
+
+PROMPT <- "Describe all of the issues identified in the following text. If you can't identify an issue say 'No Issues Identified' do not try to make something up. For each issue identified describe the cause and impact of the issue. Classify the impact as either: performance, cost, time, or other. Issues can be positive or negative. For each issue provide the following headings: description, cause, and impact and return the issues in a numbered list."
+
+
+key <- Sys.getenv("OPENAI_API_KEY")
+
+out <- project_section |>
+  dplyr::filter(nchar > nchar(heading) + 20) |>
+  slice(1) |>
+  purrr::pmap(function(year, page_from, page_to, 
+                       from, to, heading, ...){
+    
+    filename <- glue::glue("naomprss_{year}_{page_from}_{page_to}.md")
+    filepath <- file.path("../../data-raw/naomprss/", filename)
+    
+    section_md <- readLines(filepath)[from:to] |>
+      paste(collapse = "\n")
+    
+    body <- list(
+      model = "gpt-4-0613",
+      messages = list(list(
+        role = "user",
+        content = paste(PROMPT, section_md)
+     )),
+     temperature = 0.3) |>
+      jsonlite::toJSON(auto_unbox = TRUE)
+    
+    resp <- POST(url = "https://api.openai.com/v1/chat/completions",
+     add_headers(`Content-Type` = "application/json",
+                   Authorization = glue::glue("Bearer {key}")),
+     body = body)
+    
+    list(filename = filename, 
+         heading = heading,
+         content = content(resp))
+    })
+
+out
+```

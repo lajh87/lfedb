@@ -6,3 +6,12 @@ freeze: true
 
 # Enable banner style title blocks
 title-block-banner: true
+
+df-print: paged
+toc: true
+execute: 
+  warning: false
+  error: false
+
+code-fold: true
+code-summary: "Show the code"
