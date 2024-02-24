@@ -88,8 +88,8 @@ year,project_type,project,page_from,page_to,project_label,project_type_label
 2006,pre-main gate,FUTURE RAPID EFFECT SYSTEM (FRES),167,168,Future Rapid Effects System,Assessment Phase Projects
 2007,pre-main gate,FUTURE RAPID EFFECT SYSTEM (FRES),183,186,Future Rapid Effects System,Assessment Phase Projects
 2008,pre-main gate,FUTURE RAPID EFFECT SYSTEM,201,204,Future Rapid Effects System,Assessment Phase Projects
-2008,pre-main gate,FUTURE STRATEGIC TANKER AIRCRAFT,205,206,Future Rapid Effects System,Assessment Phase Projects
-2008,post-main gate,FUTURE LYNX,61,68,Future Rapid Effects System,D&M Phase
+2008,pre-main gate,FUTURE STRATEGIC TANKER AIRCRAFT,205,206,Future Strategic Tanker Aircraft (Voyager),Assessment Phase Projects
+2008,post-main gate,FUTURE LYNX,61,68,Future Lynx,D&M Phase
 2009,Pre-Main Investment Decision,Future Rapid Effect System,301,304,Future Rapid Effects System,Assessment Phase Projects
 2010,Assessment Phase Projects,Future Rapid Effects System,25,28,Future Rapid Effects System,Assessment Phase Projects
 2005,pre-main gate,FUTURE STRATEGIC TANKER AIRCRAFT (FSTA),144,145,Future Strategic Tanker Aircraft (Voyager),Assessment Phase Projects
@@ -255,7 +255,7 @@ year,project_type,project,page_from,page_to,project_label,project_type_label
 2005,post-main gate,TYPHOON AIRCREW SYNTHETIC TRAINING AIDS (ASTA),126,131,TYPHOON AIRCREW SYNTHETIC TRAINING AIDS (ASTA),D&M Phase
 2008,post-main gate,TYPHOON FUTURE CAPABILITY PROGRAMME,163,168,TYPHOON FUTURE CAPABILITY PROGRAMME,D&M Phase
 2009,Post-Main Investment Decision Projects,UK Military Flying Training System,257,280,UK Military Flying Training System,D&M Phase
-2005,pre-main gate,UK MILITARY FLYING TRAINING SYSTEM (UKMFTS),150,151,United Kingdom Co-operative Engagement Capability Frigate  and Destroyers Programme,Assessment Phase Projects
+2005,pre-main gate,UK MILITARY FLYING TRAINING SYSTEM (UKMFTS),150,151,United Kingdom Military Flying Training System,Assessment Phase Projects
 2005,pre-main gate,UKCEC FRIGATES AND DESTROYERS PROGRAMME,140,141,United Kingdom Co-operative Engagement Capability Frigate  and Destroyers Programme,Assessment Phase Projects
 2007,pre-main gate,UKCEC FRIGATE AND DESTROYER PROGRAMME,179,180,United Kingdom Co-operative Engagement Capability Frigate  and Destroyers Programme,Assessment Phase Projects
 2009,Pre-Main Investment Decision,UKCEC Frigate and Destroyer Programme,329,332,United Kingdom Co-operative Engagement Capability Frigate  and Destroyers Programme,Assessment Phase Projects
