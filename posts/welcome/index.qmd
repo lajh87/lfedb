@@ -1,0 +1,10 @@
+---
+title: "Welcome to the LFE Database Blog"
+author: "Luke Heley"
+date: "2024-02-20"
+categories: [news]
+---
+
+Welcome to the LFE database creation blog. This is used to document the development of the LFE database. 
+
+![](post_image.jpg)

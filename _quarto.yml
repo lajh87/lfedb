@@ -1,21 +1,20 @@
 project:
-  type: book
-  output-dir: docs
+  type: website
+  render: 
+    - "*.qmd"
 
-book:
-  title: "Creating LFE Database from Unstructured Data"
-  author: ""
-  date: "15/02/2024"
-  chapters:
-    - index.qmd
-    - using-chat-gpt-with-r.qmd
-    - using-chat-gpt-to-extract-data.qmd
-    - exploratory-data-analysis.qmd
-    - references.qmd
-
-bibliography: references.bib
+website:
+  title: "Developing LFE Database"
+  navbar:
+    right:
+      - about.qmd
+      - icon: github
+        href: https://github.com/lajh87/lfedb
 
 format:
   html:
     theme: cosmo
-    df-print: paged
+    css: styles.css
+
+
+
