@@ -211,9 +211,12 @@ ggplotly(g, height = 1000)
 ```
 # Modelling 
 
-In our analysis we loop through the headings by project and year where there is text within the heading.
+In our analysis we loop through the project description and description of the assessment phase for each project and in each year.
+
+Note, future iterations may be able to compress the context for projects to save on tokens.
 
 ```{r}
+#| eval: false
 
 library(httr)
 
@@ -222,9 +225,31 @@ PROMPT <- "Describe all of the issues identified in the following text. If you c
 
 key <- Sys.getenv("OPENAI_API_KEY")
 
-out <- project_section |>
+
+project_section |>
+  dplyr::filter(project_type_label == "D&M") |>
+  dplyr::filter(year < 2009) |>
   dplyr::filter(nchar > nchar(heading) + 20) |>
-  slice(1) |>
+  dplyr::mutate(heading = tolower(heading)) |>
+  dplyr::group_by(heading) |>
+  dplyr::count() |>
+  dplyr::mutate(
+    include = stringr::str_detect(
+      string = heading,
+      pattern = "about|progress|history|description"
+      ))
+
+heading_f <- c(
+  "## 1a. project description, progress and key future events",
+  "## 5a. description of the assessment phase"
+)
+
+
+
+out <- project_section |>
+   dplyr::filter(project_type_label == "D&M") |>
+  dplyr::filter(year < 2009) |>
+  dplyr::filter(tolower(heading) %in% heading_f) |>
   purrr::pmap(function(year, page_from, page_to, 
                        from, to, heading, ...){
     
@@ -251,7 +276,16 @@ out <- project_section |>
     list(filename = filename, 
          heading = heading,
          content = content(resp))
-    })
+    }, .progress = TRUE)
 
-out
+saveRDS(out, "gpt-output.RDS")
+
 ```
+
+```{r}
+out <- readRDS("gpt-output.RDS")
+out[[1]]
+```
+
+# Dissemination 
+
