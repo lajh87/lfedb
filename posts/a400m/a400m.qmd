@@ -1,0 +1,45 @@
+---
+title: "A400M"
+author: "Luke Heley"
+date: "2024-02-22"
+categories: [gpt]
+---
+
+```{r}
+project_section <- readr::read_csv(
+  file = "../../data-raw/naomprss/page_splits_manual_labels.csv",
+  show_col_types = FALSE
+  )
+
+
+project_section |>
+  dplyr::filter(project_label == "A400M") |>
+  dplyr::filter(year>=2006) |>
+  purrr::pmap(function(year, page_from, page_to, ...){
+   
+    filepath <- glue::glue("../../data-raw/naomprss/naomprss_{year}_{page_from}_{page_to}.md")
+    text <- readLines(filepath) 
+    heading <- text[stringr::str_detect(text, "^#\\s|^##\\s")]
+    
+    dplyr::tibble(year = year, heading = heading)
+  }) |>
+  dplyr::bind_rows() |> 
+  dplyr::group_by(heading,) |>
+  dplyr::count()
+
+```
+
+```{r}
+#| eval: false
+
+library(httr)
+
+PROMPT <- "Describe all of the issues identified in the following text. If you can't identify an issue say 'No Issues Identified' do not try to make something up. For each issue identified describe the cause and impact of the issue. Classify the impact as either: performance, cost, time, or other. Issues can be positive or negative. For each issue provide the following headings: description, cause, and impact and return the issues in a numbered list."
+
+
+key <- Sys.getenv("OPENAI_API_KEY")
+
+a400m |>
+  purrr::map(~.x[[4]])
+
+```
