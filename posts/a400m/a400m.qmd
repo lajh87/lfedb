@@ -1,9 +1,28 @@
 ---
-title: "A400M"
+title: "What can be learned from the delivery of A400M"
 author: "Luke Heley"
 date: "2024-02-22"
-categories: [gpt]
+categories: [gpt, a400m]
 ---
+
+
+# Objective
+
+This article extracts data on what went well and what went less well about the delivery of A400M using the Chat GPT Large Language Model. 
+
+# Background
+
+This Quarto Markdown document uses both R and Python. It uses the r package `reticulate` to transfer data between the two languages.
+
+```{r}
+library(reticulate)
+```
+
+# Data
+
+Data are sourced from major project reports between 2006 and 2015.
+
+The tables below show the headings in the difference reports by section. 
 
 ```{r}
 project_section <- readr::read_csv(
@@ -12,34 +31,330 @@ project_section <- readr::read_csv(
   )
 
 
-project_section |>
+section_lu <- project_section |>
   dplyr::filter(project_label == "A400M") |>
   dplyr::filter(year>=2006) |>
   purrr::pmap(function(year, page_from, page_to, ...){
    
     filepath <- glue::glue("../../data-raw/naomprss/naomprss_{year}_{page_from}_{page_to}.md")
-    text <- readLines(filepath) 
-    heading <- text[stringr::str_detect(text, "^#\\s|^##\\s")]
+    text <- readLines(filepath)
+    is_heading <- stringr::str_detect(text, "^#\\s|^##\\s")
     
-    dplyr::tibble(year = year, heading = heading)
+    heading <- text[is_heading]
+    start <- which(is_heading)
+    end <- c(tail(start, -1)-1, length(text))
+    level <- nchar(stringr::str_extract(heading, "^#*\\s"))-1
+    
+    chars <- purrr::pmap(list(start, end), function(start, end){
+      nchar(paste(text[start:end], collapse = "\n"))
+    })  |>
+      unlist()
+    
+    dplyr::tibble(year, level, heading, start, end, chars) |>
+      dplyr::mutate(section = cumsum(stringr::str_detect(heading, "^#\\s")), .before = 2) 
+  
   }) |>
-  dplyr::bind_rows() |> 
-  dplyr::group_by(heading,) |>
-  dplyr::count()
+  dplyr::bind_rows()  |>
+  dplyr::mutate(common_label = tolower(purrr::map_chr(stringr::str_split(heading, "\\.\\s|:\\s"), ~.x[2]))) |>
+  dplyr::mutate(common_label = ifelse(is.na(common_label), heading, common_label))
+
+section_lu |>
+  dplyr::select(section, year, common_label, chars) |>
+  dplyr::mutate(common_label = stringr::str_remove(common_label, " – not applicable| - n\a| – n/a|/pfi$")) |>
+  dplyr::arrange(section) |>
+  tidyr::pivot_wider(names_from = year, values_from = chars, values_fn = sum) |>
+  DT::datatable()
+
+```
+
+# Method
+
+If we want to extract a commentary of the project history and progress the tables above show that between 2006-2008 is was captured under the heading 'project description, progress and key future events', between 2009-2011 it appears to be captured under the heading 'progress' and from 2012-2015 it is split into two sections: 'project history' and 'in-year' progress.
+
+
+```{r}
+about_sections <- section_lu |> 
+  dplyr::filter(
+    common_label %in% c(
+      "project description, progress and key future events", 
+      "progress", "the requirement", "project history", 
+      "in-year progress"
+      )
+    )  |>
+  dplyr::select(year, start, end, common_label)
+
+files <- project_section |>
+  dplyr::filter(project_label == "A400M") |>
+  dplyr::filter(year>=2006) |>
+  purrr::pmap_df(function(year, page_from, page_to, ...){
+    file = glue::glue("naomprss_{year}_{page_from}_{page_to}.md")
+    filepath = file.path("../../data-raw/naomprss", file)
+    dplyr::tibble(filepath, year)
+  })
+
+about_files <- about_sections |> dplyr::left_join(files, by = "year")
+
+text <- about_files |> 
+  purrr::pmap_df(function(year, start, end, common_label, filepath){
+  text = readLines(filepath)[start:end] |> 
+    paste(collapse = "\n")
+  dplyr::tibble(year, common_label, text)
+})
+
+
+
+```
+
+To generate text based on the data a function is created that includes the question and context from the text data into the GPT prompt window.
+
+```{r}
+
+query_gpt <- function(question, context, 
+                      key = Sys.getenv("OPENAI_API_KEY"), 
+                      model = "gpt-4-0613"){
+  
+  PROMPT <- glue::glue(
+    "Answer the following QUESTION, based on the following CONTEXT.",
+    "If you do not know the answer say 'Unable to determine from context.",
+    "Do not try to make something up.", 
+    "The context are delimited by '\n```\n'.",
+    "QUESTION: {question}",
+    "CONTEXT: {context}",
+    .sep = "\n"
+    )
+  
+  
+  body <- list(
+        model = model,
+        messages = list(list(
+          role = "user",
+          content = PROMPT
+       )),
+       temperature = 0.3) |>
+    jsonlite::toJSON(auto_unbox = TRUE)
+      
+  resp <- httr::POST(
+    url = "https://api.openai.com/v1/chat/completions",
+    httr::add_headers(
+      `Content-Type` = "application/json",
+      Authorization = glue::glue("Bearer {key}")
+      ),
+    body = body
+    )
+  
+  httr::content(resp)
+}
+
+```
+
+For more advanced queries a Retrieval Augmented Generation (RAG) process using Chromadb.
+
+First the text is processed and outputted as json. 
+
+```{r}
+
+all_text <- section_lu |>
+  dplyr::left_join(files, by = "year") |>
+  purrr::pmap_df(function(year, start, end, common_label, filepath,section, ...){
+    text = readLines(filepath)[start:end] |> 
+    paste(collapse = "\n")
+  dplyr::tibble(year, section, common_label, text)
+  }) |>
+  dplyr::filter(!stringr::str_detect(text, "^#\\s"))
+
+meta <- all_text |>
+  dplyr::select(year, section, common_label) |>
+  jsonlite::toJSON()
+
+documents <- all_text |>
+  dplyr::pull(text) |>
+  jsonlite::toJSON()
+
+ids <- paste0("id", 1:nrow(all_text))
+```
+
+The text is then stored along with embeddings from the open ai ada2 model.
+
+```{python}
+#| eval: false
+import json
+import os
+meta = json.loads(r.meta)
+docs = json.loads(r.documents)
+
+import chromadb
+import chromadb.utils.embedding_functions as embedding_functions
+openai_ef = embedding_functions.OpenAIEmbeddingFunction(
+                api_key=os.getenv("OPENAI_API_KEY"),
+                model_name="text-embedding-ada-002"
+            )
+            
+chroma_client = chromadb.Client()
+collection = chroma_client.get_or_create_collection(
+  name="my_collection", 
+  embedding_function=openai_ef
+  )
+  
+collection.add(
+    documents=docs,
+    metadatas=meta,
+    ids=r.ids
+    )
+
+q_resp = collection.query(
+    query_texts=["What is the forecast in-service date (ISD)?"],
+    n_results=3,
+    where={"year": 2006}
+)
+
+'"""'.join(q_resp["documents"][0])
+
+```
+
+
+# Findings
+
+## How has the description of the requirement changed between 2009-2015?
+
+```{r}
+#| eval: false
+context <- text |>
+  dplyr::filter(common_label == "the requirement") |>
+  dplyr::mutate(text = paste("project: 'A400m'\nyear:",year,"\n",
+                             text)) |>
+  dplyr::pull(text)  |>
+  paste(collapse = "\n```\n")
+
+question <- "How has the description of the requirement for A400M changed over time?"
+
+q_1 <- query_gpt(question, context)
+saveRDS(q_1, "q_1.RDS")
+```
+
+```{r}
+q_1 <- readRDS("q_1.RDS")
+q_1$choices[[1]]$message$content
+```
+
+## Describe the in-year progress of the A400M Project
+
+```{r}
+#| eval: false
+context <- text |>
+  dplyr::mutate(
+    text = glue::glue(
+      "project: A400M",
+      "year: {year}",
+      "{text}",
+      .sep = "\n"
+      )
+    ) |>
+  dplyr::group_by(year) |>
+  dplyr::summarise(text = paste(text, collapse = "\n```\n")) 
+
+in_year_summary <- 2006:2015 |>
+  purrr::map(~{
+    context_ <- context |> 
+      dplyr::filter(year == .x) |>
+      dplyr::pull(text)
+    
+    question <- glue::glue(
+      "Summarise the in year progress for A400M in year:{.x}",
+      "Describe what when went, what went less well and what can be improved.",
+      .sep = "\n")
+    
+      query_gpt(question, context_)
+  })
+
+saveRDS(in_year_summary, "q_2.RDS")
 
 ```
 
 ```{r}
-#| eval: false
+in_year_summary <- readRDS("q_2.RDS")
+in_year_summary |> purrr::map(~.x$choices[[1]]$message$content)
+```
+## How has the in-service date changed over time and what, if any, have been the operational impacts?
 
-library(httr)
+```{r}
+tbls <- all_text |>
+  dplyr::filter(section == 3) |>
+  dplyr::group_by(year) |>
+  dplyr::summarise(text = paste(text, collapse = "\n")) |>
+  dplyr::pull(text) |>
+  purrr::map(rvest::read_html) |>
+  purrr::map(rvest::html_table) 
 
-PROMPT <- "Describe all of the issues identified in the following text. If you can't identify an issue say 'No Issues Identified' do not try to make something up. For each issue identified describe the cause and impact of the issue. Classify the impact as either: performance, cost, time, or other. Issues can be positive or negative. For each issue provide the following headings: description, cause, and impact and return the issues in a numbered list."
+```
 
 
-key <- Sys.getenv("OPENAI_API_KEY")
+```{r}
+tbls[[10]][[3]][,2] |> dplyr::pull()
 
-a400m |>
-  purrr::map(~.x[[4]])
+isd <- tbls |>
+  purrr::imap(~{
+    if(.y<=3){
+      t(.x[[2]]) |> 
+        dplyr::as_tibble(.name_repair = "universal") |>
+        dplyr::slice(2) |>
+        rlang::set_names(c("forecast_isd", "approved_isd", 
+                           "variation", "var_in_year")) |>
+        dplyr::mutate(project = "a400m") |>
+        purrr::map(as.character) |>
+        dplyr::as_tibble()
+    } else{
+      .x[[4]]  |>
+        dplyr::as_tibble() |>
+        rlang::set_names(c("project",  "approved_isd", "forecast_isd",
+                           "variation", "var_in_year")) |>
+        purrr::map(as.character) |>
+        dplyr::as_tibble()
+    }
+  }) |>
+  dplyr::bind_rows() |>
+  dplyr::mutate(report = 2006:2015)
 
+isd
+```
+
+The approved ISD was February 2009 (@50%) [December 2009 @90%].
+
+The reason for the variation is in the table below.
+
+```{r}
+purrr::imap(tbls, ~{
+  tbl <- if(.y<=3) .x[[3]] else .x[[5]]
+  names(tbl) <- c("date", "var", "category", "reason")
+  if(.y == 1) tbl else tbl |> dplyr::filter(date != "historic")
+}) |>
+  dplyr::bind_rows() |>
+  dplyr::filter( !stringr::str_detect(tolower(date), "net|total")) |>
+  dplyr::filter(category != "Risk Differential")
+
+```
+
+```{r}
+tbls[[10]][[6]][,2] |> dplyr::pull()
+```
+
+# Project History
+
+```{r}
+#|eval: false
+
+context <- all_text |>
+  dplyr::filter(common_label == "project history") |>
+  dplyr::slice_tail(n = 1) |>
+  dplyr::pull(text)
+
+question <- "List the events and their associated dates."
+history <- query_gpt(question, context)
+saveRDS(history, "history.RDS")
+
+```
+
+```{r}
+history <- readRDS("history.RDS")
+history$choices[[1]]$message$content |>
+  stringr::str_split("\n")
 ```

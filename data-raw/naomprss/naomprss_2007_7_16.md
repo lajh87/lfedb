@@ -20,7 +20,7 @@ Single Point of Accountability for Project Capability:
 
 Director Equipment Capability (Expeditionary Logistics & Support)
 
-# SECTION 1: ABOUT the PROJECT
+# SECTION 1: ABOUT THE PROJECT
 
 ## 1a. Project Description, Progress and Key Future Events
 
@@ -777,7 +777,7 @@ In-Year Change
 |----------|---------------------|------------|-----------------|
 | \-       | \-                  | \-         | \-              |
 
-# SECTION 5: HISTORY UP to MAIN GATE APPROVAL
+# SECTION 5: HISTORY UP TO MAIN GATE APPROVAL
 
 ## 5a. Description of the Assessment Phase
 
