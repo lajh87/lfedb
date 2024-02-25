@@ -1,1108 +1,1108 @@
 ---
-year: 2006.0
-project_type: post-main gate
-project: A400M
-page_from: 7.0
-page_to: 14.0
-project_label: A400M
-project_type_label: D&M Phase
-filenm: naomprss_2006_7_14.md
+Year: 2006.0
+Project_type: Post-Main Gate
+Project: A400M
+Page_from: 7.0
+Page_to: 14.0
+Project_label: A400M
+Project_type_label: D&M Phase
+Filenm: Naomprss_2006_7_14.md
 ---
 POST MAIN GATE PROJECT SUMMARY SHEET
 
-A400M <img src="./data-raw/gfm-out/images/naomprss_2006_7_14./media/image1.jpg"
-style="width:2.45117in;height:1.50689in" />
+A400M <img Src="./Data-Raw/Gfm-Out/Images/Naomprss_2006_7_14./Media/Image1.jpg"
+Style="Width:2.45117in;height:1.50689in" />
 
 Integrated Project Team Responsible:
 
 A400M
 
-Single Point of Accountability for project capability:
+Single Point of Accountability for Project Capability:
 
 Director Equipment Capability (Expeditionary Logistics & Support)
 
-# SECTION 1: ABOUT THE PROJECT
+# SECTION 1: ABOUT the PROJECT
 
-## 1a. Project description, progress and key future events
+## 1a. Project Description, Progress and Key Future Events
 
-A400M is planned to provide tactical and strategic mobility to all three Services. The required capabilities include: operations from airfields and semi-prepared rough landing areas in extreme climates and all weather conditions by day and night; carrying a variety of equipment including vehicles and troops over extended ranges; air dropping paratroops and equipment; and being unloaded with the minimum of ground handling equipment. The Strategic Defence Review confirmed a requirement for an airlift capability to move large single items such as attack helicopters and some Royal Engineers’ equipment and concluded that this would be met, in the latter part of this decade, by Future Transport Aircraft. The A400M was selected to meet this requirement. It will replace the remaining Hercules C-130K fleet.
+A400M is Planned to Provide Tactical and Strategic Mobility to all Three Services. the Required Capabilities Include: Operations from Airfields and Semi-Prepared Rough Landing Areas in Extreme Climates and all Weather Conditions by Day and Night; Carrying a Variety of Equipment Including Vehicles and Troops over Extended Ranges; Air Dropping Paratroops and Equipment; and Being Unloaded with the Minimum of Ground Handling Equipment. the Strategic Defence Review Confirmed a Requirement for an Airlift Capability to Move Large Single Items Such as Attack Helicopters and some Royal Engineers’ Equipment and Concluded that this Would be Met, in the Latter Part of this Decade, by Future Transport Aircraft. the A400M Was Selected to Meet this Requirement. It will Replace the Remaining Hercules C-130k Fleet.
 
-A400M is a collaborative programme involving seven European nations (Germany, France, Turkey, Spain, Belgium, Luxembourg and United Kingdom). A total of 180 aircraft (25 for United Kingdom) are being procured through a contract with Airbus Military Sociedad Limitada. The design phase is nearing completion and manufacture activities have commenced. First Flight is scheduled for 2008 and the first United Kingdom aircraft is scheduled to be delivered to the Royal Air Force in 2010.
+A400M is a Collaborative Programme Involving Seven European Nations (Germany, France, Turkey, Spain, Belgium, Luxembourg and United Kingdom). a Total of 180 Aircraft (25 for United Kingdom) are Being Procured Through a Contract with Airbus Military Sociedad Limitada. the Design Phase is Nearing Completion and Manufacture Activities Have Commenced. First Flight is Scheduled for 2008 and the First United Kingdom Aircraft is Scheduled to be Delivered to the Royal Air Force in 2010.
 
-## 1b. Associated projects
+## 1b. Associated Projects
 
 <table>
 <colgroup>
-<col style="width: 27%" />
-<col style="width: 23%" />
-<col style="width: 25%" />
-<col style="width: 23%" />
-</colgroup>
+<col Style="Width: 27%" />
+<col Style="Width: 23%" />
+<col Style="Width: 25%" />
+<col Style="Width: 23%" />
+</Colgroup>
 <thead>
 <tr>
-<th colspan="2">Critical to Achievement of ISD</th>
-<th colspan="2">
+<th Colspan="2">critical to Achievement of ISD</Th>
+<th Colspan="2">
 Critical to Initial Gate Requirement
-</th>
-</tr>
-</thead>
+</Th>
+</Tr>
+</Thead>
 <tbody>
 <tr>
-<td>Project Title</td>
+<td>project Title</Td>
 <td>
 Forecast ISD
-</td>
+</Td>
 <td>
 Project Title
-</td>
+</Td>
 <td>
 Forecast ISD
-</td>
-</tr>
+</Td>
+</Tr>
 <tr>
-<td>-</td>
-<td>-</td>
-<td>-</td>
+<td>-</Td>
+<td>-</Td>
+<td>-</Td>
 <td>
 -
-</td>
-</tr>
-</tbody>
-</table>
+</Td>
+</Tr>
+</Tbody>
+</Table>
 
-## 1c. Procurement strategy
+## 1c. Procurement Strategy
 
 <table>
 <colgroup>
-<col style="width: 26%" />
-<col style="width: 23%" />
-<col style="width: 25%" />
-<col style="width: 23%" />
-</colgroup>
+<col Style="Width: 26%" />
+<col Style="Width: 23%" />
+<col Style="Width: 25%" />
+<col Style="Width: 23%" />
+</Colgroup>
 <thead>
 <tr>
-<th>Contractor(s)</th>
-<th>Contract Scope</th>
-<th>Contract Type</th>
+<th>contractor(s)</Th>
+<th>contract Scope</Th>
+<th>contract Type</Th>
 <th>
 Procurement Route
-</th>
-</tr>
-</thead>
+</Th>
+</Tr>
+</Thead>
 <tbody>
 <tr>
-<td>Airbus Military Sociedad Limitada</td>
-<td>Development, Production and Initial in-service support</td>
-<td>Fixed price, subject to Variation of Price</td>
-<td>International Competition</td>
-</tr>
-</tbody>
-</table>
+<td>airbus Military Sociedad Limitada</Td>
+<td>development, Production and Initial in-Service Support</Td>
+<td>fixed Price, Subject to Variation of Price</Td>
+<td>international Competition</Td>
+</Tr>
+</Tbody>
+</Table>
 
 # SECTION 2: PROJECT COSTS
 
-## 2a. Performance against approved cost
+## 2a. Performance Against Approved Cost
 
 <table>
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 49%" />
-</colgroup>
+<col Style="Width: 50%" />
+<col Style="Width: 49%" />
+</Colgroup>
 <thead>
 <tr>
 <th>
-£m (outturn prices)
-</th>
+£m (Outturn Prices)
+</Th>
 <th>
 Procurement Cost
-</th>
-</tr>
-</thead>
+</Th>
+</Tr>
+</Thead>
 <tbody>
 <tr>
-<td>Current Forecast Cost</td>
+<td>current Forecast Cost</Td>
 <td>
 2616
-</td>
-</tr>
+</Td>
+</Tr>
 <tr>
-<td>Approved Cost at Main Gate</td>
+<td>approved Cost at Main Gate</Td>
 <td>
 2744
-</td>
-</tr>
+</Td>
+</Tr>
 <tr>
-<td>Variation</td>
+<td>variation</Td>
 <td>
 -128
-</td>
-</tr>
+</Td>
+</Tr>
 <tr>
-<td>In-year changes</td>
+<td>in-Year Changes</Td>
 <td>
 -28
-</td>
-</tr>
-</tbody>
-</table>
+</Td>
+</Tr>
+</Tbody>
+</Table>
 
-## 2b. Reasons for variation from approved cost
+## 2b. Reasons for Variation from Approved Cost
 
 <table>
 <colgroup>
-<col style="width: 19%" />
-<col style="width: 20%" />
-<col style="width: 23%" />
-<col style="width: 36%" />
-</colgroup>
+<col Style="Width: 19%" />
+<col Style="Width: 20%" />
+<col Style="Width: 23%" />
+<col Style="Width: 36%" />
+</Colgroup>
 <thead>
 <tr>
 <th>
 Date
-</th>
+</Th>
 <th>
 Variation (£m)
-</th>
+</Th>
 <th>
 Factor
-</th>
-<th>Explanation</th>
-</tr>
-</thead>
+</Th>
+<th>explanation</Th>
+</Tr>
+</Thead>
 <tbody>
 <tr>
 <td>
 March 2006
-</td>
+</Td>
 <td>
 -1
-</td>
+</Td>
 <td>
 Accounting
 
-Adjustments and Redefinitions</td>
-<td>Changes to Cost of Capital costs and sunk costs.</td>
-</tr>
+Adjustments and Redefinitions</Td>
+<td>changes to Cost of Capital Costs and Sunk Costs.</Td>
+</Tr>
 <tr>
 <td>
 March 2006
-</td>
+</Td>
 <td>
 -5
-</td>
+</Td>
 <td>
 Changed Requirement
-</td>
-<td>Departmental Review - Deletion of civil pallets configuration item.</td>
-</tr>
+</Td>
+<td>departmental Review - Deletion of Civil Pallets Configuration Item.</Td>
+</Tr>
 <tr>
 <td>
 February 2006
-</td>
+</Td>
 <td>
 -22
-</td>
+</Td>
 <td>
 Technical Factors
-</td>
-<td>Programme realism with regard to costing Technical Publications (-£5m), Special to Type Equipment (-£5m), Aircraft Ground Equipment (-£4m), Government Furnished Equipment/Facilities (-£7m) and Codification of equipment/spares (-£1m).</td>
-</tr>
+</Td>
+<td>programme Realism with Regard to Costing Technical Publications (-£5m), Special to Type Equipment (-£5m), Aircraft Ground Equipment (-£4m), Government Furnished Equipment/Facilities (-£7m) and Codification of Equipment/Spares (-£1m).</Td>
+</Tr>
 <tr>
 <td>
 February 2006
-</td>
+</Td>
 <td>
 -24
-</td>
+</Td>
 <td>
 Exchange Rate
-</td>
-<td>Variation in 2005/2006.</td>
-</tr>
+</Td>
+<td>variation in 2005/2006.</Td>
+</Tr>
 <tr>
 <td>
 February 2006
-</td>
+</Td>
 <td>
 +21
-</td>
+</Td>
 <td>
 Technical Factors
-</td>
-<td>Training Needs Analysis identified the need for funding increase;
-Develop &amp; Build Facilities (+£11m), Initial Training (+£7m), Develop &amp; Build Training Devices (+£6m), and Develop &amp; Build Training Facilities (-£3m).</td>
-</tr>
+</Td>
+<td>training Needs Analysis Identified the Need for Funding Increase;
+Develop &amp; Build Facilities (+£11m), Initial Training (+£7m), Develop &amp; Build Training Devices (+£6m), and Develop &amp; Build Training Facilities (-£3m).</Td>
+</Tr>
 <tr>
 <td>
 February 2006
-</td>
+</Td>
 <td>
 +6
-</td>
+</Td>
 <td>
 Technical Factors
-</td>
-<td>Identification of UK only certification requirements.</td>
-</tr>
+</Td>
+<td>identification of UK Only Certification Requirements.</Td>
+</Tr>
 <tr>
 <td>
 January 2006
-</td>
+</Td>
 <td>
 +6
-</td>
+</Td>
 <td>
 Changed Requirement
-</td>
+</Td>
 <td>
 Addition of Propeller Brake.
-</td>
-</tr>
+</Td>
+</Tr>
 <tr>
 <td>
 January 2006
-</td>
+</Td>
 <td>
 -23
-</td>
+</Td>
 <td>
 Changed Budgetary Priorities
-</td>
-<td>Departmental Reviews have identified savings to programme risks.</td>
-</tr>
+</Td>
+<td>departmental Reviews Have Identified Savings to Programme Risks.</Td>
+</Tr>
 <tr>
 <td>
 January 2006
-</td>
+</Td>
 <td>
 +14
-</td>
+</Td>
 <td>
 Inflation
-</td>
-<td>Variation in 2005/2006.</td>
-</tr>
+</Td>
+<td>variation in 2005/2006.</Td>
+</Tr>
 <tr>
 <td>
 Historic
-</td>
+</Td>
 <td>
 -42
-</td>
+</Td>
 <td>
 Accounting
 
-Adjustments and Redefinitions</td>
-<td>Transfer from RDEL to CDEL (-£1m). Difference in variation figures due to revision of Cost of Capital Charge (-£42m). Correction of previous years’ treatment of deliveries (+£1m).</td>
-</tr>
-</tbody>
-</table>
+Adjustments and Redefinitions</Td>
+<td>transfer from RDEL to CDEL (-£1m). Difference in Variation Figures Due to Revision of Cost of Capital Charge (-£42m). Correction of Previous Years’ Treatment of Deliveries (+£1m).</Td>
+</Tr>
+</Tbody>
+</Table>
 
-<table style="width:99%;">
+<table Style="Width:99%;">
 <colgroup>
-<col style="width: 1%" />
-<col style="width: 17%" />
-<col style="width: 1%" />
-<col style="width: 19%" />
-<col style="width: 1%" />
-<col style="width: 22%" />
-<col style="width: 1%" />
-<col style="width: 34%" />
-</colgroup>
+<col Style="Width: 1%" />
+<col Style="Width: 17%" />
+<col Style="Width: 1%" />
+<col Style="Width: 19%" />
+<col Style="Width: 1%" />
+<col Style="Width: 22%" />
+<col Style="Width: 1%" />
+<col Style="Width: 34%" />
+</Colgroup>
 <thead>
 <tr>
-<th colspan="2">
+<th Colspan="2">
 Date
-</th>
-<th colspan="2">
+</Th>
+<th Colspan="2">
 Variation (£m)
-</th>
-<th colspan="2">
+</Th>
+<th Colspan="2">
 Factor
-</th>
-<th colspan="2">Explanation</th>
-</tr>
-</thead>
+</Th>
+<th Colspan="2">explanation</Th>
+</Tr>
+</Thead>
 <tbody>
 <tr>
-<td colspan="2">
+<td Colspan="2">
 Historic
-</td>
-<td colspan="2">
+</Td>
+<td Colspan="2">
 -7
-</td>
-<td colspan="2">
+</Td>
+<td Colspan="2">
 Technical Factors
-</td>
-<td colspan="2">Costing realism in line with better programme understanding including adjustment for actual sunk costs (-£6m). Costing re-adjusted with understanding of future programme: Certification (-£15m), Government Furnished Equipment (+£4m), Support (+£4m). Reprofiling deliveries for realism Build Facilities (-£1m), Initial Provision Spares (-£5m), Deployment Kits (-£1m). Reduction in the requirement for government procured items. (-£46m). Improved understanding of programme requirement for Initial Provision Spares (+83m), Deployment Kits (-£1m), Initial Training (-£13m) and Mission Planning &amp; Restitution System (-£10m).</td>
-</tr>
+</Td>
+<td Colspan="2">costing Realism in Line with Better Programme Understanding Including Adjustment for Actual Sunk Costs (-£6m). Costing Re-Adjusted with Understanding of Future Programme: Certification (-£15m), Government Furnished Equipment (+£4m), Support (+£4m). Reprofiling Deliveries for Realism Build Facilities (-£1m), Initial Provision Spares (-£5m), Deployment Kits (-£1m). Reduction in the Requirement for Government Procured Items. (-£46m). Improved Understanding of Programme Requirement for Initial Provision Spares (+83m), Deployment Kits (-£1m), Initial Training (-£13m) and Mission Planning &amp; Restitution System (-£10m).</Td>
+</Tr>
 <tr>
-<td colspan="2">
+<td Colspan="2">
 Historic
-</td>
-<td colspan="2">
+</Td>
+<td Colspan="2">
 -313
-</td>
-<td colspan="2">
+</Td>
+<td Colspan="2">
 Changed Requirement
-</td>
-<td colspan="2">Option to reprofile Training Facilities for realism (-£1m). Programme measure to move deferred configuration items back into aircraft delivery profile (-£2m). Reduction in number of aircraft to be equipped with Defensive Aids Sub-System (DASS) from 25 to 9 (-£238m). Programme option to delete and defer configuration items and to slip In Service Date by 12 months (-£81m). Option bringing the DASS forward onto aircraft 1-9 (+£9m).</td>
-</tr>
+</Td>
+<td Colspan="2">option to Reprofile Training Facilities for Realism (-£1m). Programme Measure to Move Deferred Configuration Items Back into Aircraft Delivery Profile (-£2m). Reduction in Number of Aircraft to be Equipped with Defensive Aids Sub-System (DASS) from 25 to 9 (-£238m). Programme Option to Delete and Defer Configuration Items and to Slip in Service Date by 12 Months (-£81m). Option Bringing the DASS Forward Onto Aircraft 1-9 (+£9m).</Td>
+</Tr>
 <tr>
-<td colspan="2">
+<td Colspan="2">
 Historic
-</td>
-<td colspan="2">
+</Td>
+<td Colspan="2">
 -67
-</td>
-<td colspan="2">
+</Td>
+<td Colspan="2">
 Changed Budgetary Priorities
-</td>
-<td colspan="2">Changed delivery profile from that in the Business Case (-£61m). Minor realism adjustments, includes UK share of OCCAR Programme Division costs (+£5m), QinetiQ Support costs increased (+£1m), unidentified variance (+£1m). Equipment Programme Measure deleting 1 Simulator (-£20m). Minor realism changes includes Certification, Special to Type equipment and Training Facilities (+£7m).</td>
-</tr>
+</Td>
+<td Colspan="2">changed Delivery Profile from that in the Business Case (-£61m). Minor Realism Adjustments, Includes UK Share of OCCAR Programme Division Costs (+£5m), QinetiQ Support Costs Increased (+£1m), Unidentified Variance (+£1m). Equipment Programme Measure Deleting 1 Simulator (-£20m). Minor Realism Changes Includes Certification, Special to Type Equipment and Training Facilities (+£7m).</Td>
+</Tr>
 <tr>
-<td colspan="2">
+<td Colspan="2">
 Date
-</td>
-<td colspan="2">
+</Td>
+<td Colspan="2">
 Variation (£m)
-</td>
-<td colspan="2">
+</Td>
+<td Colspan="2">
 Factor
-</td>
-<td colspan="2">Explanation</td>
-</tr>
+</Td>
+<td Colspan="2">explanation</Td>
+</Tr>
 <tr>
-<td colspan="2">
+<td Colspan="2">
 Historic
-</td>
-<td colspan="2">
+</Td>
+<td Colspan="2">
 -2
-</td>
-<td colspan="2">
+</Td>
+<td Colspan="2">
 Inflation
-</td>
-<td colspan="2">Variation in 2004/2005 (+£8m). Changes between inflation rate assumed in the Business Case and yearly inflation indices resulting in variations: 2000/2001 (-£6m), 2001/2002 (+£6m), 2002/2003 (-£10m).</td>
-</tr>
+</Td>
+<td Colspan="2">variation in 2004/2005 (+£8m). Changes Between Inflation Rate Assumed in the Business Case and Yearly Inflation Indices Resulting in Variations: 2000/2001 (-£6m), 2001/2002 (+£6m), 2002/2003 (-£10m).</Td>
+</Tr>
 <tr>
-<td colspan="2">
+<td Colspan="2">
 Historic
-</td>
-<td colspan="2">
+</Td>
+<td Colspan="2">
 +29
-</td>
-<td colspan="2">
+</Td>
+<td Colspan="2">
 Exchange Rate
-</td>
-<td colspan="2">Variation in 2004/2005 (+£39m). Variation in exchange rate assumptions used in the Business Case, 2000/2001, 2001/2002 and 2002/2003 (-£232m). Variation in 2003/2004 (+£222m).</td>
-</tr>
+</Td>
+<td Colspan="2">variation in 2004/2005 (+£39m). Variation in Exchange Rate Assumptions Used in the Business Case, 2000/2001, 2001/2002 and 2002/2003 (-£232m). Variation in 2003/2004 (+£222m).</Td>
+</Tr>
 <tr>
-<td colspan="2">
+<td Colspan="2">
 Historic
-</td>
-<td colspan="2">
+</Td>
+<td Colspan="2">
 +353
-</td>
-<td colspan="2">
+</Td>
+<td Colspan="2">
 Contracting Process
-</td>
-<td colspan="2">Realism to reflect 3 month delay in 2000/2001 to contract effectivity (+£52m). Slip of aircraft payments and associated equipment to reflect above contract let decision (+£15m). Improved costing data for Configuration Items available (+£160m). Contract Effectivity Date (CED) slipped from November 2001 - October 2002 (+£149m). CED slipped from October 2002 - April 2003 (-£59m). Adjustments in line with increased knowledge of Programme (+£66m). CED slipped from April 2003 - May 2003, includes redefinition of Asset Deliveries to align with aircraft delivery schedule (-£30m).</td>
-</tr>
+</Td>
+<td Colspan="2">realism to Reflect 3 Month Delay in 2000/2001 to Contract Effectivity (+£52m). Slip of Aircraft Payments and Associated Equipment to Reflect above Contract Let Decision (+£15m). Improved Costing Data for Configuration Items Available (+£160m). Contract Effectivity Date (CED) Slipped from November 2001 - October 2002 (+£149m). CED Slipped from October 2002 - April 2003 (-£59m). Adjustments in Line with Increased Knowledge of Programme (+£66m). CED Slipped from April 2003 - May 2003, Includes Redefinition of Asset Deliveries to Align with Aircraft Delivery Schedule (-£30m).</Td>
+</Tr>
 <tr>
-<td colspan="2">
+<td Colspan="2">
 Historic
-</td>
-<td colspan="2">
+</Td>
+<td Colspan="2">
 +65
-</td>
-<td colspan="2">
+</Td>
+<td Colspan="2">
 Procurement Strategy
-</td>
-<td colspan="2">Total number of aircraft ordered by participating nations higher than anticipated, and consequent reduction in Unit Production Cost (-£65m). Subsequent contract renegotiation due to German reduction in offtake (+£130m).</td>
-</tr>
+</Td>
+<td Colspan="2">total Number of Aircraft Ordered by Participating Nations Higher than Anticipated, and Consequent Reduction in Unit Production Cost (-£65m). Subsequent Contract Renegotiation Due to German Reduction in Offtake (+£130m).</Td>
+</Tr>
 <tr>
-<td colspan="2">
+<td Colspan="2">
 Historic
-</td>
-<td colspan="2">
+</Td>
+<td Colspan="2">
 -116
-</td>
-<td colspan="2">
+</Td>
+<td Colspan="2">
 Risk Differential
-</td>
-<td colspan="2">Difference between the risk allowed for in the most likely (50%) and the highest acceptable (90%) estimates at Main Gate.</td>
-</tr>
+</Td>
+<td Colspan="2">difference Between the Risk Allowed for in the Most Likely (50%) and the Highest Acceptable (90%) Estimates at Main Gate.</Td>
+</Tr>
 <tr>
-<td colspan="2">
+<td Colspan="2">
 Net Variation
-</td>
-<td colspan="2">
+</Td>
+<td Colspan="2">
 -128
-</td>
-<td colspan="2"></td>
-<td colspan="2"></td>
-</tr>
-</tbody>
-</table>
+</Td>
+<td Colspan="2"></Td>
+<td Colspan="2"></Td>
+</Tr>
+</Tbody>
+</Table>
 
-## 2c. Expenditure to date
+## 2c. Expenditure to Date
 
 <table>
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 49%" />
-</colgroup>
+<col Style="Width: 50%" />
+<col Style="Width: 49%" />
+</Colgroup>
 <thead>
 <tr>
 <th>
 Expenditure to 31 March 2006 (£m)
-</th>
+</Th>
 <th>
 199
-</th>
-</tr>
-</thead>
+</Th>
+</Tr>
+</Thead>
 <tbody>
 <tr>
-<td>2d. Years of peak procurement expenditure</td>
-<td></td>
-</tr>
+<td>2d. Years of Peak Procurement Expenditure</Td>
+<td></Td>
+</Tr>
 <tr>
 <td>
 2009/2010
-</td>
+</Td>
 <td>
 2010/2011
-</td>
-</tr>
-</tbody>
-</table>
+</Td>
+</Tr>
+</Tbody>
+</Table>
 
-## 2e. Unit production cost
+## 2e. Unit Production Cost
 
 <table>
 <colgroup>
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 23%" />
-</colgroup>
+<col Style="Width: 25%" />
+<col Style="Width: 25%" />
+<col Style="Width: 25%" />
+<col Style="Width: 23%" />
+</Colgroup>
 <thead>
 <tr>
-<th colspan="2">Unit Production Cost (£m)</th>
-<th colspan="2">
+<th Colspan="2">unit Production Cost (£m)</Th>
+<th Colspan="2">
 Quantities Required
-</th>
-</tr>
-</thead>
+</Th>
+</Tr>
+</Thead>
 <tbody>
 <tr>
-<td>at Main Gate</td>
-<td>Current</td>
-<td>at Main Gate</td>
+<td>at Main Gate</Td>
+<td>current</Td>
+<td>at Main Gate</Td>
 <td>
 Current
-</td>
-</tr>
+</Td>
+</Tr>
 <tr>
-<td></td>
-<td></td>
+<td></Td>
+<td></Td>
 <td>
 25
-</td>
+</Td>
 <td>
 25
-</td>
-</tr>
-</tbody>
-</table>
+</Td>
+</Tr>
+</Tbody>
+</Table>
 
 # SECTION 3: PROJECT TIMESCALE
 
-## 3a. Definition of in-service date
+## 3a. Definition of in-Service Date
 
 <table>
 <colgroup>
-<col style="width: 23%" />
-<col style="width: 76%" />
-</colgroup>
+<col Style="Width: 23%" />
+<col Style="Width: 76%" />
+</Colgroup>
 <thead>
 <tr>
 <th>
 ISD Definition:
-</th>
-<th>Delivery of 7th aircraft with Strategic Military Aircraft Release and support arrangements.</th>
-</tr>
-</thead>
+</Th>
+<th>delivery of 7th Aircraft with Strategic Military Aircraft Release and Support Arrangements.</Th>
+</Tr>
+</Thead>
 <tbody>
-</tbody>
-</table>
+</Tbody>
+</Table>
 
-## 3b. Performance against approved in-service date
+## 3b. Performance Against Approved in-Service Date
 
 <table>
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 49%" />
-</colgroup>
+<col Style="Width: 50%" />
+<col Style="Width: 49%" />
+</Colgroup>
 <thead>
 <tr>
-<th></th>
+<th></Th>
 <th>
 Date
-</th>
-</tr>
-</thead>
+</Th>
+</Tr>
+</Thead>
 <tbody>
 <tr>
-<td>Current Forecast ISD</td>
+<td>current Forecast ISD</Td>
 <td>
 March 2011
-</td>
-</tr>
+</Td>
+</Tr>
 <tr>
-<td>Approved ISD at Main Gate</td>
+<td>approved ISD at Main Gate</Td>
 <td>
 December 2009
-</td>
-</tr>
+</Td>
+</Tr>
 <tr>
-<td>Variation (Months)</td>
+<td>variation (Months)</Td>
 <td>
 15
-</td>
-</tr>
+</Td>
+</Tr>
 <tr>
-<td>In-year changes</td>
+<td>in-Year Changes</Td>
 <td>
 0
-</td>
-</tr>
-</tbody>
-</table>
+</Td>
+</Tr>
+</Tbody>
+</Table>
 
-## 3c. Reasons for variation from approved ISD
+## 3c. Reasons for Variation from Approved ISD
 
 <table>
 <colgroup>
-<col style="width: 19%" />
-<col style="width: 20%" />
-<col style="width: 23%" />
-<col style="width: 36%" />
-</colgroup>
+<col Style="Width: 19%" />
+<col Style="Width: 20%" />
+<col Style="Width: 23%" />
+<col Style="Width: 36%" />
+</Colgroup>
 <thead>
 <tr>
 <th>
 Date
-</th>
+</Th>
 <th>
-Variation (months)
-</th>
+Variation (Months)
+</Th>
 <th>
 Factor
-</th>
+</Th>
 <th>
 Explanation
-</th>
-</tr>
-</thead>
+</Th>
+</Tr>
+</Thead>
 <tbody>
 <tr>
 <td>
 Historic
-</td>
+</Td>
 <td>
 +16
-</td>
+</Td>
 <td>
 Changed Budgetary Priorities
-</td>
-<td>Change in the customer’s requirement flowing from changed budgetary priorities (+16 months).</td>
-</tr>
+</Td>
+<td>change in the Customer’s Requirement Flowing from Changed Budgetary Priorities (+16 Months).</Td>
+</Tr>
 <tr>
 <td>
 Historic
-</td>
+</Td>
 <td>
 +9
-</td>
-<td>Procurement Strategy</td>
-<td>Delay in bringing contract into effect as a result of delayed approvals in Germany (+9 months).</td>
-</tr>
+</Td>
+<td>procurement Strategy</Td>
+<td>delay in Bringing Contract into Effect as a Result of Delayed Approvals in Germany (+9 Months).</Td>
+</Tr>
 <tr>
 <td>
 Historic
-</td>
+</Td>
 <td>
 -10
-</td>
+</Td>
 <td>
 Risk Differential
-</td>
-<td>Difference between the risk allowed for in the most likely (50%) and the highest acceptable (90%) estimates at Main Gate.</td>
-</tr>
+</Td>
+<td>difference Between the Risk Allowed for in the Most Likely (50%) and the Highest Acceptable (90%) Estimates at Main Gate.</Td>
+</Tr>
 <tr>
 <td>
 Net Variation
-</td>
+</Td>
 <td>
 +15
-</td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
+</Td>
+<td></Td>
+<td></Td>
+</Tr>
+</Tbody>
+</Table>
 
-## 3d. Cost resulting from ISD variation
+## 3d. Cost Resulting from ISD Variation
 
 <table>
 <colgroup>
-<col style="width: 19%" />
-<col style="width: 20%" />
-<col style="width: 23%" />
-<col style="width: 36%" />
-</colgroup>
+<col Style="Width: 19%" />
+<col Style="Width: 20%" />
+<col Style="Width: 23%" />
+<col Style="Width: 36%" />
+</Colgroup>
 <thead>
 <tr>
-<th>Type of Cost/Saving</th>
+<th>type of Cost/Saving</Th>
 <th>
 Cost £m
-</th>
+</Th>
 <th>
 Saving £m
-</th>
+</Th>
 <th>
 Explanation
-</th>
-</tr>
-</thead>
+</Th>
+</Tr>
+</Thead>
 <tbody>
 <tr>
-<td>Short Term Plan</td>
+<td>short Term Plan</Td>
 <td>
 26
-</td>
+</Td>
 <td>
 -
-</td>
+</Td>
 <td>
-Life extension of 14 C130K aircraft.
-</td>
-</tr>
+Life Extension of 14 C130K Aircraft.
+</Td>
+</Tr>
 <tr>
-<td>Total</td>
+<td>total</Td>
 <td>
 +26
-</td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
+</Td>
+<td></Td>
+<td></Td>
+</Tr>
+</Tbody>
+</Table>
 
-## 3e. Operational impact of ISD variation
+## 3e. Operational Impact of ISD Variation
 
-The Out of Service date of C130K aircraft has been extended to 2012. This matches the planned capability build up of A400M.
+The Out of Service Date of C130K Aircraft Has Been Extended to 2012. This Matches the Planned Capability Build Up of A400M.
 
 # SECTION 4: KEY USER REQUIREMENTS
 
-## 4a. Performance against approved key user requirements
+## 4a. Performance Against Approved Key User Requirements
 
 <table>
 <colgroup>
-<col style="width: 14%" />
-<col style="width: 49%" />
-<col style="width: 12%" />
-<col style="width: 11%" />
-<col style="width: 12%" />
-</colgroup>
+<col Style="Width: 14%" />
+<col Style="Width: 49%" />
+<col Style="Width: 12%" />
+<col Style="Width: 11%" />
+<col Style="Width: 12%" />
+</Colgroup>
 <thead>
 <tr>
-<th>Serial</th>
-<th>Key Requirement</th>
-<th>Forecast to be Met</th>
+<th>serial</Th>
+<th>key Requirement</Th>
+<th>forecast to be Met</Th>
 <th>
 At Risk
-</th>
+</Th>
 <th>
 Not to be Met
-</th>
-</tr>
-</thead>
+</Th>
+</Tr>
+</Thead>
 <tbody>
 <tr>
-<td>01</td>
+<td>01</Td>
 <td>
 Deployment Capability
-</td>
+</Td>
 <td>
 Yes
-</td>
+</Td>
 <td>
 -
-</td>
+</Td>
 <td>
 -
-</td>
-</tr>
+</Td>
+</Tr>
 <tr>
-<td>02</td>
+<td>02</Td>
 <td>
 Payload
-</td>
+</Td>
 <td>
 Yes
-</td>
+</Td>
 <td>
 -
-</td>
+</Td>
 <td>
 -
-</td>
-</tr>
+</Td>
+</Tr>
 <tr>
-<td>03</td>
+<td>03</Td>
 <td>
 Environmental Operating Envelope
-</td>
+</Td>
 <td>
 Yes
-</td>
+</Td>
 <td>
 -
-</td>
+</Td>
 <td>
 -
-</td>
-</tr>
+</Td>
+</Tr>
 <tr>
-<td>04</td>
+<td>04</Td>
 <td>
 Tactical Operations
-</td>
+</Td>
 <td>
 Yes
-</td>
+</Td>
 <td>
 -
-</td>
+</Td>
 <td>
 -
-</td>
-</tr>
+</Td>
+</Tr>
 <tr>
-<td>05</td>
+<td>05</Td>
 <td>
 Navigation Performance
-</td>
+</Td>
 <td>
 Yes
-</td>
+</Td>
 <td>
 -
-</td>
+</Td>
 <td>
 -
-</td>
-</tr>
+</Td>
+</Tr>
 <tr>
-<td>06</td>
+<td>06</Td>
 <td>
 Communication System
-</td>
+</Td>
 <td>
 Yes
-</td>
+</Td>
 <td>
 -
-</td>
+</Td>
 <td>
 -
-</td>
-</tr>
+</Td>
+</Tr>
 <tr>
-<td>07</td>
+<td>07</Td>
 <td>
 Defensive Aids Suite
-</td>
+</Td>
 <td>
 Yes
-</td>
+</Td>
 <td>
 -
-</td>
+</Td>
 <td>
 -
-</td>
-</tr>
+</Td>
+</Tr>
 <tr>
-<td>08</td>
+<td>08</Td>
 <td>
 Aerial Delivery
-</td>
+</Td>
 <td>
 Yes
-</td>
+</Td>
 <td>
 -
-</td>
+</Td>
 <td>
 -
-</td>
-</tr>
+</Td>
+</Tr>
 <tr>
-<td>09</td>
+<td>09</Td>
 <td>
 Crew Composition
-</td>
+</Td>
 <td>
 Yes
-</td>
+</Td>
 <td>
 -
-</td>
+</Td>
 <td>
 -
-</td>
-</tr>
+</Td>
+</Tr>
 <tr>
-<td></td>
-<td>Percentage currently forecast to be met</td>
-<td colspan="2">100 %</td>
-<td></td>
-</tr>
+<td></Td>
+<td>percentage Currently Forecast to be Met</Td>
+<td Colspan="2">100 %</Td>
+<td></Td>
+</Tr>
 <tr>
-<td></td>
+<td></Td>
 <td>
 In-Year Change
-</td>
-<td colspan="2">
+</Td>
+<td Colspan="2">
 0
-</td>
-<td></td>
-</tr>
-</tbody>
-</table>
+</Td>
+<td></Td>
+</Tr>
+</Tbody>
+</Table>
 
-## 4b. Reasons for variation against approved key requirements
+## 4b. Reasons for Variation Against Approved Key Requirements
 
 <table>
 <colgroup>
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 23%" />
-</colgroup>
+<col Style="Width: 25%" />
+<col Style="Width: 25%" />
+<col Style="Width: 25%" />
+<col Style="Width: 23%" />
+</Colgroup>
 <thead>
 <tr>
-<th>Date</th>
+<th>date</Th>
 <th>
 Key Requirement
-</th>
-<th>Factor</th>
+</Th>
+<th>factor</Th>
 <th>
 Explanation
-</th>
-</tr>
-</thead>
+</Th>
+</Tr>
+</Thead>
 <tbody>
 <tr>
-<td>-</td>
-<td>-</td>
-<td>-</td>
+<td>-</Td>
+<td>-</Td>
+<td>-</Td>
 <td>
 -
-</td>
-</tr>
-</tbody>
-</table>
+</Td>
+</Tr>
+</Tbody>
+</Table>
 
-# SECTION 5: HISTORY UP TO MAIN GATE APPROVAL
+# SECTION 5: HISTORY UP to MAIN GATE APPROVAL
 
 ## 5a. Description of the Assessment Phase
 
-The Government announced in December 1994 that it would replace its ageing C-130K Hercules fleet, in part by procuring 25 C-130Js from Lockheed Martin and in addition, subject to certain conditions, by rejoining the next phase of the collaborative Future Large Aircraft (FLA) programme (now known as A400M). The FLA ‘Initial Gate’ approval was achieved in July 1997 and in the same year the solution assumed for costing purposes was changed to an initial lease of four C-17 and subsequent procurement of 25 FLA. A Request For Proposals (RFP) was issued to Airbus in September 1997 on behalf of the seven FLA nations (United Kingdom, France, Germany, Italy, Spain, Belgium, Turkey). Subsequently, in July 1998, four nations (United Kingdom, France, Spain, Belgium) issued a “competitive RFP” for a Future Transport Aircraft to Airbus Military Company (A400M), Boeing (C17) and Lockheed Martin (C-130J).
+The Government Announced in December 1994 that it Would Replace Its Ageing C-130k Hercules Fleet, in Part by Procuring 25 C-130js from Lockheed Martin and in Addition, Subject to Certain Conditions, by Rejoining the Next Phase of the Collaborative Future Large Aircraft (FLA) Programme (Now Known as A400M). the FLA ‘initial Gate’ Approval Was Achieved in July 1997 and in the Same Year the Solution Assumed for Costing Purposes Was Changed to an Initial Lease of Four C-17 and Subsequent Procurement of 25 FLA. a Request for Proposals (RFP) Was Issued to Airbus in September 1997 on Behalf of the Seven FLA Nations (United Kingdom, France, Germany, Italy, Spain, Belgium, Turkey). Subsequently, in July 1998, Four Nations (United Kingdom, France, Spain, Belgium) Issued a “competitive RFP” for a Future Transport Aircraft to Airbus Military Company (A400M), Boeing (C17) and Lockheed Martin (C-130j).
 
-Proposals were received on 29 January 1999 and parallel national and international assessments were undertaken. These covered Combined Operational Effectiveness and Investment Appraisal, technical and commercial compliance, risk assessment, and an appraisal of the international and industrial dimensions. This work also led to parallel negotiations and clarification with the three bidders. At the direction of the Equipment Approvals Committee in December 1999, additional work was undertaken to inform the Main Gate submission. On 16 May 2000 the Government announced the decision to procure 25 A400M aircraft to meet the FTA requirement.
+Proposals Were Received on 29 January 1999 and Parallel National and International Assessments Were Undertaken. These Covered Combined Operational Effectiveness and Investment Appraisal, Technical and Commercial Compliance, Risk Assessment, and an Appraisal of the International and Industrial Dimensions. This Work also Led to Parallel Negotiations and Clarification with the Three Bidders. at the Direction of the Equipment Approvals Committee in December 1999, Additional Work Was Undertaken to Inform the Main Gate Submission. on 16 May 2000 the Government Announced the Decision to Procure 25 A400M Aircraft to Meet the FTA Requirement.
 
 <table>
 <colgroup>
-<col style="width: 48%" />
-<col style="width: 17%" />
-<col style="width: 17%" />
-<col style="width: 17%" />
-</colgroup>
+<col Style="Width: 48%" />
+<col Style="Width: 17%" />
+<col Style="Width: 17%" />
+<col Style="Width: 17%" />
+</Colgroup>
 <thead>
 <tr>
-<th></th>
+<th></Th>
 <th>
 Earliest
-</th>
+</Th>
 <th>
-Budgeted For
-</th>
-<th>Latest Acceptable</th>
-</tr>
-</thead>
+Budgeted for
+</Th>
+<th>latest Acceptable</Th>
+</Tr>
+</Thead>
 <tbody>
 <tr>
-<td>Forecast ISD at Main Gate</td>
+<td>forecast ISD at Main Gate</Td>
 <td>
 -
-</td>
+</Td>
 <td>
 February 2009
-</td>
+</Td>
 <td>
 December 2009
-</td>
-</tr>
+</Td>
+</Tr>
 <tr>
-<td>Envelope within which capability was expected to be available at Initial Gate</td>
+<td>envelope Within which Capability Was Expected to be Available at Initial Gate</Td>
 <td>
 -
-</td>
+</Td>
 <td>
 -
-</td>
+</Td>
 <td>
 December 2007
-</td>
-</tr>
-</tbody>
-</table>
+</Td>
+</Tr>
+</Tbody>
+</Table>
 
 ## 5b. Cost of the Assessment Phase
 
 <table>
 <colgroup>
-<col style="width: 31%" />
-<col style="width: 31%" />
-<col style="width: 36%" />
-</colgroup>
+<col Style="Width: 31%" />
+<col Style="Width: 31%" />
+<col Style="Width: 36%" />
+</Colgroup>
 <thead>
 <tr>
 <th>
-£m (outturn prices)
-</th>
+£m (Outturn Prices)
+</Th>
 <th>
-Assessment Phase cost
-</th>
-<th>Proportion of total estimated procurement expenditure</th>
-</tr>
-</thead>
+Assessment Phase Cost
+</Th>
+<th>proportion of Total Estimated Procurement Expenditure</Th>
+</Tr>
+</Thead>
 <tbody>
 <tr>
-<td>Actual Cost</td>
+<td>actual Cost</Td>
 <td>
 1
-</td>
+</Td>
 <td>
 0.04%
-</td>
-</tr>
+</Td>
+</Tr>
 <tr>
-<td>Approved Cost at Initial Gate</td>
+<td>approved Cost at Initial Gate</Td>
 <td>
 2
-</td>
+</Td>
 <td>
 0.08%
-</td>
-</tr>
+</Td>
+</Tr>
 <tr>
-<td>Variation</td>
+<td>variation</Td>
 <td>
 -1
-</td>
-<td></td>
-</tr>
-</tbody>
-</table>
+</Td>
+<td></Td>
+</Tr>
+</Tbody>
+</Table>
 
 ## 5c. Duration of Assessment Phase
 
 <table>
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 49%" />
-</colgroup>
+<col Style="Width: 50%" />
+<col Style="Width: 49%" />
+</Colgroup>
 <tbody>
 <tr>
-<td>Date of Main Gate Approval</td>
+<td>date of Main Gate Approval</Td>
 <td>
 May 2000
-</td>
-</tr>
+</Td>
+</Tr>
 <tr>
-<td>Date of Initial Gate Approval</td>
+<td>date of Initial Gate Approval</Td>
 <td>
 -
-</td>
-</tr>
+</Td>
+</Tr>
 <tr>
-<td>Length of Assessment Phase [months]</td>
+<td>length of Assessment Phase [months]</Td>
 <td>
 -
-</td>
-</tr>
-</tbody>
-</table>
+</Td>
+</Tr>
+</Tbody>
+</Table>
 
-## 5d. Cost boundaries at Initial Gate and Main Gate Approvals
+## 5d. Cost Boundaries at Initial Gate and Main Gate Approvals
 
 <table>
 <colgroup>
-<col style="width: 48%" />
-<col style="width: 17%" />
-<col style="width: 17%" />
-<col style="width: 17%" />
-</colgroup>
+<col Style="Width: 48%" />
+<col Style="Width: 17%" />
+<col Style="Width: 17%" />
+<col Style="Width: 17%" />
+</Colgroup>
 <thead>
 <tr>
 <th>
-£m (outturn prices)
-</th>
+£m (Outturn Prices)
+</Th>
 <th>
 Lowest
-</th>
+</Th>
 <th>
-Budgeted For
-</th>
+Budgeted for
+</Th>
 <th>
 Highest
-</th>
-</tr>
-</thead>
+</Th>
+</Tr>
+</Thead>
 <tbody>
 <tr>
-<td>Cost of Demonstration and Manufacture Phase forecast at Main Gate</td>
+<td>cost of Demonstration and Manufacture Phase Forecast at Main Gate</Td>
 <td>
 -
-</td>
+</Td>
 <td>
 2628
-</td>
+</Td>
 <td>
 2744
-</td>
-</tr>
+</Td>
+</Tr>
 <tr>
-<td>Expected envelope of costs to support Demonstration and Manufacture Phase at Initial Gate</td>
+<td>expected Envelope of Costs to Support Demonstration and Manufacture Phase at Initial Gate</Td>
 <td>
 -
-</td>
+</Td>
 <td>
 -
-</td>
+</Td>
 <td>
 -
-</td>
-</tr>
-</tbody>
-</table>
+</Td>
+</Tr>
+</Tbody>
+</Table>
 
-## 5e. ISD boundaries at Initial Gate and Main Gate Approvals
+## 5e. ISD Boundaries at Initial Gate and Main Gate Approvals
 
-T H I S PAG E I S I N T E N T I O N A L LY B L A N K
+T H I S PAG E I S I N T E N T I O N a L LY B L a N K
