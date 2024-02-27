@@ -274,6 +274,30 @@ saveRDS(in_year_summary, "q_2.RDS")
 in_year_summary <- readRDS("q_2.RDS")
 in_year_summary |> purrr::map(~.x$choices[[1]]$message$content)
 ```
+
+##  Describe the history of the project to date.
+
+```{r}
+#|eval: false
+
+context <- all_text |>
+  dplyr::filter(common_label == "project history") |>
+  dplyr::slice_tail(n = 1) |>
+  dplyr::pull(text)
+
+question <- "List the events and their associated dates."
+history <- query_gpt(question, context)
+saveRDS(history, "history.RDS")
+
+```
+
+```{r}
+history <- readRDS("history.RDS")
+history$choices[[1]]$message$content |>
+  stringr::str_split("\n")
+```
+
+
 ## How has the in-service date changed over time and what, if any, have been the operational impacts?
 
 ```{r}
@@ -337,24 +361,77 @@ purrr::imap(tbls, ~{
 tbls[[10]][[6]][,2] |> dplyr::pull()
 ```
 
-# Project History
+## How has cost chanaged over time?
 
 ```{r}
-#|eval: false
+cost_html_tbls <- all_text |>
+  dplyr::filter(section == 2)   |>
+  dplyr::group_by(year) |>
+  dplyr::summarise(text = paste(text, collapse = "\n")) |>
+  dplyr::pull(text) |>
+  purrr::map(rvest::read_html) |>
+  purrr::map(rvest::html_table) 
 
-context <- all_text |>
-  dplyr::filter(common_label == "project history") |>
-  dplyr::slice_tail(n = 1) |>
-  dplyr::pull(text)
+cost_html_tbls[[1]][[2]]
+cost_html_tbls[[1]][[3]][-4,c(2:3,5,7)]
 
-question <- "List the events and their associated dates."
-history <- query_gpt(question, context)
-saveRDS(history, "history.RDS")
+cost_html_tbls[[2]][[2]]
+cost_html_tbls[[2]][[3]]
+cost_html_tbls[[2]][[4]]
 
+cost_html_tbls[[3]][[2]]
+cost_html_tbls[[3]][[3]]
+cost_html_tbls[[3]][[4]][-6,]
+
+col_to_first_row <- function(df){
+   df[2:(nrow(df)+1), ] <- df[1:nrow(df),]
+   
+   for(i in seq_along(names(df))){
+     if (is.na(names(df)[i])) names(df)[i] <- "NA"
+     if (names(df)[i] == "") names(df)[i] <- "NA"
+   }
+  
+  df <- df |>
+    dplyr::mutate(dplyr::across(dplyr::everything(), as.character))
+  
+  df[1, ] <- t(names(df))
+  names(df) <- paste0("x", 1:ncol(df))
+  df
+  
+}
+
+cost_html_tbls[[4]][[4]]
+col_to_first_row(cost_html_tbls[[4]][[5]])
+cost_html_tbls[[4]][[6]]
+
+cost_html_tbls[[5]][[4]]
+cost_html_tbls[[5]][[5]]
+cost_html_tbls[[5]][[6]]
+cost_html_tbls[[5]][[7]]
+
+cost_html_tbls[[6]][[4]]
+cost_html_tbls[[6]][[5]]
+col_to_first_row(cost_html_tbls[[6]][[5]])
+col_to_first_row(cost_html_tbls[[6]][[6]])
+col_to_first_row(cost_html_tbls[[6]][[7]])
+
+cost_html_tbls[[7]][[4]]
+col_to_first_row(cost_html_tbls[[7]][[5]])
+col_to_first_row(cost_html_tbls[[7]][[6]])
+col_to_first_row(cost_html_tbls[[7]][[7]])
+col_to_first_row(cost_html_tbls[[7]][[8]])
+col_to_first_row(cost_html_tbls[[7]][[9]])
+
+cost_html_tbls[[8]][[4]]
+col_to_first_row(cost_html_tbls[[8]][[5]])
+col_to_first_row(cost_html_tbls[[8]][[6]])
+col_to_first_row(cost_html_tbls[[8]][[7]])
+
+cost_html_tbls[[9]][[3]]
+col_to_first_row(cost_html_tbls[[9]][[4]])
+col_to_first_row(cost_html_tbls[[9]][[5]])
+
+cost_html_tbls[[10]][[3]]
+#col_to_first_row(cost_html_tbls[[10]][[4]])
 ```
-
-```{r}
-history <- readRDS("history.RDS")
-history$choices[[1]]$message$content |>
-  stringr::str_split("\n")
 ```

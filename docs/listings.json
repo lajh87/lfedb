@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/eda2/eda2.html",
       "/posts/a400m/a400m.html",
       "/posts/exploratory-data-analysis/eda.html",
       "/posts/using-chat-gpt-with-r/using-chat-gpt-with-r.html",

@@ -1,0 +1,33 @@
+---
+title: "Exploratory Data Analysis2"
+author: "Luke Heley"
+date: "2024-02-26"
+categories: [eda]
+---
+
+```{r}
+#| output: false
+library(ggplot2)
+library(plotly)
+```
+
+
+```{r}
+d <- "../../data-raw/naomprss/"
+f <- list.files(d, ".md$")
+
+header_file <- purrr::map(f, ~{
+    text_in <- readLines(file.path(d, .x) )
+    header_lgl <- stringr::str_detect(text_in, "^#\\s")
+    header <- text_in[header_lgl]
+    dplyr::tibble(header, file = .x)
+    
+  }) |>
+  dplyr::bind_rows()
+
+header_file |>
+  dplyr::mutate(filenm = tools::file_path_sans_ext(file)) |>
+  tidyr::separate(col = filenm, 
+                  into = c("source", "year", "page_from", "page_to"),
+                  sep = "_")
+```
